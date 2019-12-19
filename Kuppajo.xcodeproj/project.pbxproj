@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0475B123504E3A001C2C1E /* CardViewController.xib */; };
+		1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0475B223504E3A001C2C1E /* CardViewController.swift */; };
+		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
+		1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8823602E4500815700 /* Roboto-Light.ttf */; };
+		1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8623602D8400815700 /* Roboto-Medium.ttf */; };
+		1B8FA8D2234A67B400A43D98 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */; };
+		1B8FE36F234DABC000DE82AF /* TermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FE36E234DABC000DE82AF /* TermsVC.swift */; };
+		1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FE370234DB6DB00DE82AF /* SettingsTVC.swift */; };
+		1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D69112352B1450006E6E5 /* MapVC.swift */; };
+		1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D69132352BB3D0006E6E5 /* LocationCell.swift */; };
+		1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D691523542EFE0006E6E5 /* LocationInfoTVC.swift */; };
+		2C71B7D548F45D7F6982F8A4 /* Pods_Kuppajo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D30E6510EF953E84DE7DA9 /* Pods_Kuppajo.framework */; };
+		BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCBE233ACC300008246D /* AppDelegate.swift */; };
+		BDB6DCC4233ACC300008246D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC2233ACC300008246D /* Main.storyboard */; };
+		BDB6DCC6233ACC310008246D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC5233ACC310008246D /* Assets.xcassets */; };
+		BDB6DCC9233ACC310008246D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC7233ACC310008246D /* LaunchScreen.storyboard */; };
+		BDB6DCD1233AD62C0008246D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD0233AD62C0008246D /* LoginVC.swift */; };
+		BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD4233AD66A0008246D /* HomeVC.swift */; };
+		BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD6233AD6C90008246D /* CardsVC.swift */; };
+		BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCDE233AD8320008246D /* QRVC.swift */; };
+		BDB6DCE1233BD6E60008246D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */; };
+		BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B0475B123504E3A001C2C1E /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		1B0475B223504E3A001C2C1E /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		1B79CA8623602D8400815700 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1B79CA8823602E4500815700 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		1B8FE36E234DABC000DE82AF /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
+		1B8FE370234DB6DB00DE82AF /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		1B9D69112352B1450006E6E5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		1B9D69132352BB3D0006E6E5 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		1B9D691523542EFE0006E6E5 /* LocationInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoTVC.swift; sourceTree = "<group>"; };
+		8E7E8FC8E0B07C9D14FAA4E4 /* Pods-Kuppajo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.debug.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.debug.xcconfig"; sourceTree = "<group>"; };
+		A4D30E6510EF953E84DE7DA9 /* Pods_Kuppajo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuppajo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB6DCBB233ACC300008246D /* Kuppajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuppajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB6DCBE233ACC300008246D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDB6DCC3233ACC300008246D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDB6DCC5233ACC310008246D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDB6DCC8233ACC310008246D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDB6DCCA233ACC310008246D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB6DCD0233AD62C0008246D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BDB6DCD4233AD66A0008246D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BDB6DCD6233AD6C90008246D /* CardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsVC.swift; sourceTree = "<group>"; };
+		BDB6DCDE233AD8320008246D /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
+		BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCalls.swift; sourceTree = "<group>"; };
+		F8D81E864B621F06889E5776 /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDB6DCB8233ACC300008246D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C71B7D548F45D7F6982F8A4 /* Pods_Kuppajo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B79CA8C2360355900815700 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1B79CA8623602D8400815700 /* Roboto-Medium.ttf */,
+				1B79CA8823602E4500815700 /* Roboto-Light.ttf */,
+				1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		1B9D69102352B1230006E6E5 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				1B9D69112352B1450006E6E5 /* MapVC.swift */,
+				1B9D69132352BB3D0006E6E5 /* LocationCell.swift */,
+				1B9D691523542EFE0006E6E5 /* LocationInfoTVC.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		A414EB87433177A7C0F9E980 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E7E8FC8E0B07C9D14FAA4E4 /* Pods-Kuppajo.debug.xcconfig */,
+				F8D81E864B621F06889E5776 /* Pods-Kuppajo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDB6DCB2233ACC300008246D = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCBD233ACC300008246D /* Kuppajo */,
+				BDB6DCBC233ACC300008246D /* Products */,
+				A414EB87433177A7C0F9E980 /* Pods */,
+				EBC14E10C0CE614C124A73E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDB6DCBC233ACC300008246D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCBB233ACC300008246D /* Kuppajo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDB6DCBD233ACC300008246D /* Kuppajo */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCBE233ACC300008246D /* AppDelegate.swift */,
+				BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */,
+				BDB6DCC2233ACC300008246D /* Main.storyboard */,
+				1B9D69102352B1230006E6E5 /* Locations */,
+				BDB6DCDD233AD77E0008246D /* Login */,
+				BDB6DCDC233AD7740008246D /* Home */,
+				BDB6DCDB233AD76F0008246D /* Cards */,
+				BDB6DCDA233AD6F70008246D /* Settings */,
+				BDB6DCC5233ACC310008246D /* Assets.xcassets */,
+				1B79CA8C2360355900815700 /* Font */,
+				BDB6DCC7233ACC310008246D /* LaunchScreen.storyboard */,
+				BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */,
+				BDB6DCCA233ACC310008246D /* Info.plist */,
+			);
+			path = Kuppajo;
+			sourceTree = "<group>";
+		};
+		BDB6DCDA233AD6F70008246D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1B8FE370234DB6DB00DE82AF /* SettingsTVC.swift */,
+				1B8FE36E234DABC000DE82AF /* TermsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BDB6DCDB233AD76F0008246D /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCD6233AD6C90008246D /* CardsVC.swift */,
+				BDB6DCDE233AD8320008246D /* QRVC.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		BDB6DCDC233AD7740008246D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCD4233AD66A0008246D /* HomeVC.swift */,
+				1B0475B223504E3A001C2C1E /* CardViewController.swift */,
+				1B0475B123504E3A001C2C1E /* CardViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDB6DCDD233AD77E0008246D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6DCD0233AD62C0008246D /* LoginVC.swift */,
+				1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EBC14E10C0CE614C124A73E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4D30E6510EF953E84DE7DA9 /* Pods_Kuppajo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDB6DCBA233ACC300008246D /* Kuppajo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB6DCCD233ACC310008246D /* Build configuration list for PBXNativeTarget "Kuppajo" */;
+			buildPhases = (
+				2D587E7E9CFBD22B54F67090 /* [CP] Check Pods Manifest.lock */,
+				BDB6DCB7233ACC300008246D /* Sources */,
+				BDB6DCB8233ACC300008246D /* Frameworks */,
+				BDB6DCB9233ACC300008246D /* Resources */,
+				0D9A016087A71CA0B9491B4F /* [CP] Embed Pods Frameworks */,
+				1FDA9D61FB86EEDF2DD82B04 /* [CP] Copy Pods Resources */,
+				1BF4AC4D235F717100566510 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kuppajo;
+			productName = Kuppajo;
+			productReference = BDB6DCBB233ACC300008246D /* Kuppajo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDB6DCB3233ACC300008246D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Sagar;
+				TargetAttributes = {
+					BDB6DCBA233ACC300008246D = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = BDB6DCB6233ACC300008246D /* Build configuration list for PBXProject "Kuppajo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDB6DCB2233ACC300008246D;
+			productRefGroup = BDB6DCBC233ACC300008246D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDB6DCBA233ACC300008246D /* Kuppajo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDB6DCB9233ACC300008246D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */,
+				1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */,
+				BDB6DCC9233ACC310008246D /* LaunchScreen.storyboard in Resources */,
+				BDB6DCE1233BD6E60008246D /* GoogleService-Info.plist in Resources */,
+				1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */,
+				1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */,
+				BDB6DCC6233ACC310008246D /* Assets.xcassets in Resources */,
+				BDB6DCC4233ACC300008246D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D9A016087A71CA0B9491B4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BF4AC4D235F717100566510 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		1FDA9D61FB86EEDF2DD82B04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D587E7E9CFBD22B54F67090 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kuppajo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDB6DCB7233ACC300008246D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */,
+				1B8FA8D2234A67B400A43D98 /* WelcomeVC.swift in Sources */,
+				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
+				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,
+				1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */,
+				BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */,
+				1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */,
+				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,
+				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
+				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
+				BDB6DCD1233AD62C0008246D /* LoginVC.swift in Sources */,
+				1B8FE36F234DABC000DE82AF /* TermsVC.swift in Sources */,
+				1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDB6DCC2233ACC300008246D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDB6DCC3233ACC300008246D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDB6DCC7233ACC310008246D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDB6DCC8233ACC310008246D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDB6DCCB233ACC310008246D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDB6DCCC233ACC310008246D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDB6DCCE233ACC310008246D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7E8FC8E0B07C9D14FAA4E4 /* Pods-Kuppajo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL6476HKHT;
+				INFOPLIST_FILE = Kuppajo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.Kuppajo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BDB6DCCF233ACC310008246D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D81E864B621F06889E5776 /* Pods-Kuppajo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL6476HKHT;
+				INFOPLIST_FILE = Kuppajo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.Kuppajo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDB6DCB6233ACC300008246D /* Build configuration list for PBXProject "Kuppajo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB6DCCB233ACC310008246D /* Debug */,
+				BDB6DCCC233ACC310008246D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDB6DCCD233ACC310008246D /* Build configuration list for PBXNativeTarget "Kuppajo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB6DCCE233ACC310008246D /* Debug */,
+				BDB6DCCF233ACC310008246D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDB6DCB3233ACC300008246D /* Project object */;
+}

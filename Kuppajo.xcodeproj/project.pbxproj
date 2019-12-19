@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0475B123504E3A001C2C1E /* CardViewController.xib */; };
 		1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0475B223504E3A001C2C1E /* CardViewController.swift */; };
+		1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5191DC23AB4EFB002B568B /* Locations.swift */; };
 		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
 		1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8823602E4500815700 /* Roboto-Light.ttf */; };
 		1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8623602D8400815700 /* Roboto-Medium.ttf */; };
-		1B8FA8D2234A67B400A43D98 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */; };
 		1B8FE36F234DABC000DE82AF /* TermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FE36E234DABC000DE82AF /* TermsVC.swift */; };
 		1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FE370234DB6DB00DE82AF /* SettingsTVC.swift */; };
 		1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D69112352B1450006E6E5 /* MapVC.swift */; };
@@ -34,10 +34,10 @@
 /* Begin PBXFileReference section */
 		1B0475B123504E3A001C2C1E /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		1B0475B223504E3A001C2C1E /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		1B5191DC23AB4EFB002B568B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		1B79CA8623602D8400815700 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1B79CA8823602E4500815700 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1B8FE36E234DABC000DE82AF /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		1B8FE370234DB6DB00DE82AF /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		1B9D69112352B1450006E6E5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -123,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BDB6DCBE233ACC300008246D /* AppDelegate.swift */,
+				1B5191DC23AB4EFB002B568B /* Locations.swift */,
 				BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */,
 				BDB6DCC2233ACC300008246D /* Main.storyboard */,
 				1B9D69102352B1230006E6E5 /* Locations */,
@@ -171,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				BDB6DCD0233AD62C0008246D /* LoginVC.swift */,
-				1B8FA8D1234A67B400A43D98 /* WelcomeVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -342,10 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */,
-				1B8FA8D2234A67B400A43D98 /* WelcomeVC.swift in Sources */,
 				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
 				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,
 				1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */,
+				1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */,
 				BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */,
 				1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */,
 				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,

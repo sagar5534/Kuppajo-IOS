@@ -161,42 +161,11 @@
                         <outlet property="GoogleBtnFake" destination="S8a-WR-GFE" id="2BM-EO-6r4"/>
                         <outlet property="GoogleView" destination="awx-iO-NfC" id="6ga-nD-aHc"/>
                         <outlet property="LoginPanel" destination="UJ1-hl-UeO" id="ob4-js-7fV"/>
-                        <segue destination="6t5-Tr-Js5" kind="show" identifier="ToWelcome" id="C1d-hH-0EJ"/>
-                        <segue destination="MeC-X4-PRk" kind="show" id="2wQ-xW-mtX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1002.4" y="-642.11822660098528"/>
-        </scene>
-        <!--WelcomeVC-->
-        <scene sceneID="4T8-7W-DiY">
-            <objects>
-                <viewController storyboardIdentifier="Welcome" id="6t5-Tr-Js5" customClass="WelcomeVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YfM-qb-NVw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxO-fY-Whj">
-                                <rect key="frame" x="130" y="707" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continue To App"/>
-                                <connections>
-                                    <action selector="Confirm:" destination="6t5-Tr-Js5" eventType="touchUpInside" id="67i-67-Ogf"/>
-                                    <action selector="Continue:" destination="6t5-Tr-Js5" eventType="touchUpInside" id="Bsf-AF-Epn"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IaE-Sp-3Og"/>
-                    </view>
-                    <connections>
-                        <segue destination="MeC-X4-PRk" kind="show" id="EDe-vb-L9E"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EXW-PS-1WH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4" y="-641"/>
         </scene>
         <!--QRVC-->
         <scene sceneID="q1P-rh-EUK">
@@ -295,7 +264,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-rY-mcp">
                                 <rect key="frame" x="0.0" y="140" width="375" height="439"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-GM-1zA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-GM-1zA">
                                 <rect key="frame" x="0.0" y="579" width="375" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -310,10 +279,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6Vd-Bg-MF0">
-                                                    <rect key="frame" x="15" y="21.333333333333332" width="150.66666666666666" height="37.333333333333343"/>
+                                                    <rect key="frame" x="15" y="21.333333333333332" width="147.66666666666666" height="37.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downtown Sudbury" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-KV-meO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="20"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -335,6 +304,7 @@
                                         <connections>
                                             <outlet property="LocationName" destination="nEW-KV-meO" id="P5V-le-mIj"/>
                                             <outlet property="LocationTimeDetail" destination="zEC-Q7-6Ex" id="DhX-ua-ktU"/>
+                                            <segue destination="wOA-yt-gNy" kind="show" identifier="showDetail" id="zBr-aO-QD2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -370,7 +340,7 @@
             <objects>
                 <tableViewController id="wOA-yt-gNy" customClass="LocationInfoTVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="35U-nL-Dbs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -468,44 +438,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHh-Hz-FXa">
-                                                    <rect key="frame" x="16" y="11" width="61" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHh-Hz-FXa">
+                                                    <rect key="frame" x="15.999999999999996" y="11" width="55.666666666666657" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUz-0w-tdd">
-                                                    <rect key="frame" x="16" y="39" width="63" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUz-0w-tdd">
+                                                    <rect key="frame" x="16" y="39" width="61" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-3z-fwE">
-                                                    <rect key="frame" x="16" y="67" width="87.333333333333329" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-3z-fwE">
+                                                    <rect key="frame" x="16.000000000000004" y="67" width="63.333333333333343" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-fE-CO7">
-                                                    <rect key="frame" x="16" y="95" width="70.666666666666671" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-fE-CO7">
+                                                    <rect key="frame" x="16" y="95" width="87.333333333333329" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-Ex-A5V">
-                                                    <rect key="frame" x="16" y="123" width="46" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-Ex-A5V">
+                                                    <rect key="frame" x="16" y="123" width="70.333333333333329" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBb-No-j1b">
-                                                    <rect key="frame" x="16" y="151" width="66.666666666666671" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBb-No-j1b">
+                                                    <rect key="frame" x="16" y="151" width="46" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xz-k7-v08">
-                                                    <rect key="frame" x="15.999999999999996" y="179" width="55.666666666666657" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xz-k7-v08">
+                                                    <rect key="frame" x="16" y="179" width="66.666666666666671" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -595,6 +565,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sudbury" largeTitleDisplayMode="always" id="EtB-hG-P5i"/>
+                    <connections>
+                        <outlet property="Address1" destination="W0V-nx-JPp" id="0aa-6E-s50"/>
+                        <outlet property="Address2" destination="UWE-Mp-yeH" id="XCY-rH-BiN"/>
+                        <outlet property="Phone" destination="NAT-ST-VKR" id="1W0-hc-QZQ"/>
+                        <outletCollection property="HoursGroup" destination="n5m-92-VCS" collectionClass="NSMutableArray" id="JtH-F6-2ym"/>
+                        <outletCollection property="HoursGroup" destination="Eba-4f-Gns" collectionClass="NSMutableArray" id="qAa-3H-MHD"/>
+                        <outletCollection property="HoursGroup" destination="Tve-B9-lhH" collectionClass="NSMutableArray" id="DVP-DO-prd"/>
+                        <outletCollection property="HoursGroup" destination="3qf-W4-p7Q" collectionClass="NSMutableArray" id="6Md-sM-nGA"/>
+                        <outletCollection property="HoursGroup" destination="gEN-xa-k4h" collectionClass="NSMutableArray" id="f0b-CT-cJm"/>
+                        <outletCollection property="HoursGroup" destination="vWB-CC-Rhp" collectionClass="NSMutableArray" id="118-1Q-Hbu"/>
+                        <outletCollection property="HoursGroup" destination="CAR-lp-z8e" collectionClass="NSMutableArray" id="tWC-d9-lZ9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwQ-BW-ZDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -729,10 +711,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Dcw-Ux-1i5">
+                            <tableViewSection headerTitle="Account" id="Dcw-Ux-1i5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="51M-cu-cxk">
-                                        <rect key="frame" x="0.0" y="358.33333206176758" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="378.66666603088379" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="51M-cu-cxk" id="L59-Mj-ABT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -905,7 +887,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan for Rewards!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbm-Oa-ogB">
-                                                        <rect key="frame" x="3" y="0.0" width="140" height="16"/>
+                                                        <rect key="frame" x="4" y="0.0" width="139" height="16"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                         <color key="textColor" name="Primary-Color"/>
                                                         <nil key="highlightedColor"/>
@@ -970,7 +952,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xsy-zn-R3h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -989,7 +971,7 @@
                     <tabBarItem key="tabBarItem" title="Locations" image="map" catalog="system" selectedImage="map.fill" id="tx1-gN-Mwn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="l6p-Af-PxM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1010,7 +992,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="idw-Qu-zhj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -1049,6 +1031,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iyv-lT-9Uc"/>
-        <segue reference="2wQ-xW-mtX"/>
+        <segue reference="zBr-aO-QD2"/>
     </inferredMetricsTieBreakers>
 </document>

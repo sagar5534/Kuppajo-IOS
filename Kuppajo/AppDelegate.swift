@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     var window: UIWindow?
     var realtimeTask: ListenerRegistration?
+    lazy var locations = [Locations]()
     
     func firebaseLogin( key credential: AuthCredential ) {
         Auth.auth().signIn(with: credential) { (authResult, error) in
@@ -31,18 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             
             // User is signed in
             let user = Auth.auth().currentUser
-            let sb = UIStoryboard(name: "Main", bundle: nil)
             
             if let user = user {
-                //Check Document in Firestore
+                //Check for Existing user document in Firestore
                 let docRef = db.collection("users").document(user.uid)
                 
                 promiseDocExists(DocumentRef: docRef)
-                    .then {
-                        if $0{
-                        }else{
-                            newUser(FirebaseUser: user)
-                        }
+                .then {
+                    if $0{
+                        //Normal Login - User Exist
+                    }else{
+                        newUser(FirebaseUser: user)
+                    }
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
                     self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
                 }
             }
@@ -53,8 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
-        
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
@@ -63,6 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
         if user != nil {
+            //Get app_detail
+            app_details()
+
             //Show App
             self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
         } else {
@@ -100,6 +103,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     
     //------------------------------------------ Login Code ------------------------------------------
+    
+    func app_details(){
+        let docRef = db.collection("app_details").document("location")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+             
+                for data in document.data()!{
+                    let innerData = data.value as! [String:Any]
+                    let name = innerData["Name"] as! String
+                    let address1 = innerData["Address1"] as! String
+                    let address2 = innerData["Address2"] as! String
+                    let phone = innerData["Phone"] as! String
+                    let googleMap = innerData["googleMap"] as! String
+                    
+                    let x = innerData["Hours"] as! NSArray
+                    self.locations.append(Locations(name: name, address1: address1, address2: address2, phone: phone, hours: Hours(x as! [String]), googleMap: googleMap))
+                }
+            
+            } else {
+                print("Document does not exist")
+            }
+        }
+        
+    }
     
     //Animating Any Root View Controller Changes
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {

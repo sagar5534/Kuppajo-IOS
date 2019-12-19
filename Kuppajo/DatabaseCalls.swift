@@ -15,12 +15,9 @@ let db = Firestore.firestore()
 
 // Add a new document in collection Users ~ For new user
 func newUser(FirebaseUser user: User){
-    
     db.collection("users").document(user.uid).setData([
         "name": user.displayName!,
         "email": user.email!,
-        "creationDate": user.metadata.creationDate!,
-        "lastLogin": user.metadata.lastSignInDate!,
         "basic_counter": 0,
         "premium_counter": 0
     ]) { err in
@@ -30,7 +27,6 @@ func newUser(FirebaseUser user: User){
             print("Document successfully written! User Signed Up")
         }
     }
-    
 }
 
 func promiseDocExists(DocumentRef docRef: DocumentReference) -> Promise<Bool> {
@@ -44,11 +40,3 @@ func promiseDocExists(DocumentRef docRef: DocumentReference) -> Promise<Bool> {
         }
     }
 }
-
-
-
-
-
-
-
-

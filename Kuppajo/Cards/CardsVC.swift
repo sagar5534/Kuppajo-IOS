@@ -20,6 +20,9 @@ class CardsVC: UIViewController, CAAnimationDelegate {
         
         setupPrompt()
         setupQRData()
+        
+        
+        
     }
     
     

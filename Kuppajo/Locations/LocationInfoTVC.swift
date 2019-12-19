@@ -39,11 +39,11 @@ class LocationInfoTVC: UITableViewController {
         var phone = locationData.phone
         phone = phone.replacingOccurrences(of: "-", with: "")
         guard let number = URL(string: "tel://" + phone) else {return}
-
+        
         UIApplication.shared.open(number, options: [:], completionHandler: nil)
         
     }
-
+    
     @IBAction func DirectionButton(_ sender: Any) {
         
         if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {

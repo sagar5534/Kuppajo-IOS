@@ -38,14 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                 let docRef = db.collection("users").document(user.uid)
                 
                 promiseDocExists(DocumentRef: docRef)
-                .then {
-                    if $0{
-                        //Normal Login - User Exist
-                    }else{
-                        newUser(FirebaseUser: user)
-                    }
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
+                    .then {
+                        if $0{
+                            //Normal Login - User Exist
+                        }else{
+                            newUser(FirebaseUser: user)
+                        }
+                        let sb = UIStoryboard(name: "Main", bundle: nil)
+                        self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
                 }
             }
             
@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         if user != nil {
             //Get app_detail
             app_details()
-
+            
             //Show App
             self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
         } else {
@@ -108,7 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         let docRef = db.collection("app_details").document("location")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-             
+                
                 for data in document.data()!{
                     let innerData = data.value as! [String:Any]
                     let name = innerData["Name"] as! String
@@ -120,7 +120,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                     let x = innerData["Hours"] as! NSArray
                     self.locations.append(Locations(name: name, address1: address1, address2: address2, phone: phone, hours: Hours(x as! [String]), googleMap: googleMap))
                 }
-            
             } else {
                 print("Document does not exist")
             }

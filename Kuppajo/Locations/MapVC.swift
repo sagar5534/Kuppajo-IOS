@@ -16,7 +16,7 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var locationData = [Locations]()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +35,7 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         locationData = appDelegate.locations
-          
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +49,7 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.LocationName.text = locationData[indexPath.row].name
         let weekday = Date().dayNumberOfWeek()!
         cell.LocationTimeDetail.text = locationData[indexPath.row].hours.days[weekday]
-
+        
         return cell
     }
     

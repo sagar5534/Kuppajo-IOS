@@ -65,40 +65,38 @@ class CardViewController: UIViewController, UIScrollViewDelegate {
         
         let db = Firestore.firestore()
         
-        db.collection("instagram_links")
-            .order(by: "time", descending: true)
-            .limit(to: 7).getDocuments()
-                { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        var counter = 0;
-                        for document in querySnapshot!.documents {
-                            counter = counter + 1
-                            let link = document.get("link") as! String
-                            
-                            let imageView = UIImageView()
-                            let url = URL(string: link)
-                            imageView.kf.setImage(with: url)
-                            
-                            imageView.contentMode = .scaleAspectFit
-                            let xPosition = self.InstagramScroll.frame.width * CGFloat(counter - 1)
-                            
-                            imageView.frame = CGRect(x: xPosition, y: 0, width: self.InstagramScroll.frame.width, height: self.InstagramScroll.frame.height)
-                            
-                            self.InstagramScroll.contentSize.width = self.InstagramScroll.frame.width * CGFloat(counter)
-                            
-                            self.InstagramScroll.contentSize.height = self.InstagramScroll.frame.height
-                            
-                            self.InstagramScroll.addSubview(imageView)
-                            print("Added")
-                        }
-                    }
+        let docRef = db.collection("app_details").document("instagram")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                let links = document.get("links") as! NSArray
+                var counter = 0;
+                for link in links{
+                    counter = counter + 1
+                    let imageView = UIImageView()
+                    let url = URL(string: link as! String)
+                    imageView.kf.setImage(with: url)
+                    
+                    imageView.contentMode = .scaleAspectFit
+                    let xPosition = self.InstagramScroll.frame.width * CGFloat(counter - 1)
+                    
+                    imageView.frame = CGRect(x: xPosition, y: 0, width: self.InstagramScroll.frame.width, height: self.InstagramScroll.frame.height)
+                    
+                    self.InstagramScroll.contentSize.width = self.InstagramScroll.frame.width * CGFloat(counter)
+                    
+                    self.InstagramScroll.contentSize.height = self.InstagramScroll.frame.height
+                    
+                    self.InstagramScroll.addSubview(imageView)
+                    print("Added")
+                    
+                }
+                
+            } else {
+                print("Document does not exist")
+            }
         }
         
     }
-    
-    
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(self.InstagramScroll.contentOffset.x / InstagramScroll.frame.size.width)

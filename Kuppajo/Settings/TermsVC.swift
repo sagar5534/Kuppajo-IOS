@@ -36,6 +36,4 @@ class TermsVC: UIViewController, WKUIDelegate {
         view = webView
     }
     
-    
-    
 }

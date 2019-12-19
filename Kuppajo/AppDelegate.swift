@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                         }else{
                             newUser(FirebaseUser: user)
                         }
+                        self.app_details()
                         let sb = UIStoryboard(name: "Main", bundle: nil)
                         self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
                 }
@@ -124,7 +125,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                 print("Document does not exist")
             }
         }
-        
     }
     
     //Animating Any Root View Controller Changes

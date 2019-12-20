@@ -15,7 +15,6 @@ target 'Kuppajo' do
   pod 'Firebase/Performance'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'Charts'
   pod 'FBSDKLoginKit'
   pod 'PromisesSwift'
   pod 'Kingfisher'

@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         if user != nil {
             //Get app_detail
             app_details()
-            
+        
             //Show App
             self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
         } else {
@@ -106,6 +106,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     //------------------------------------------ Login Code ------------------------------------------
     
     func app_details(){
+        
+        locations = [Locations]()
         let docRef = db.collection("app_details").document("location")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {

@@ -25,9 +25,33 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         
         let user = Auth.auth().currentUser
         if user != nil{
-            UserName.text = user?.displayName
+            
+            let db = Firestore.firestore()
+            let docRef = db.collection("users").document(user!.uid)
+            docRef.getDocument(source: .default) { (document, error) in
+              if let document = document {
+                let dataDescription = document.data()
+                //let name = dataDescription!["name"] as! String
+                //self.UserName.text = name
+                //print(name)
+                
+              } else {
+                print("Document does not exist in cache")
+              }
+            }
+            
+            
+            
             UserEmail.text = user?.email
-            UserIcon.kf.setImage(with: user?.photoURL)
+            
+            let photo = user?.photoURL
+            if (photo == nil){
+                UserIcon.image = #imageLiteral(resourceName: "genericuser")
+            }
+            else{
+                UserIcon.kf.setImage(with: photo)
+            }
+            
         }
         
     }

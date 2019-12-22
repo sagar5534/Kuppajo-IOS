@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -82,14 +82,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-Zq-dwm">
-                                                    <rect key="frame" x="53.666666666666671" y="173.66666666666666" width="70" height="45"/>
+                                                    <rect key="frame" x="51.666666666666671" y="173.66666666666666" width="70" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="O3K-He-mDz"/>
                                                         <constraint firstAttribute="width" secondItem="5ba-Zq-dwm" secondAttribute="height" multiplier="14:9" id="yPV-Iz-rzv"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-NF-Zid" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                                    <rect key="frame" x="0.0" y="-10" width="171.66666666666666" height="382"/>
+                                                    <rect key="frame" x="0.0" y="-10" width="171.66666666666666" height="377"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="NO"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -111,7 +111,7 @@
                                             <constraints>
                                                 <constraint firstItem="sef-2J-Esb" firstAttribute="top" secondItem="2PE-eG-hKe" secondAttribute="bottom" id="0rI-yH-6Nf"/>
                                                 <constraint firstItem="uVl-NF-Zid" firstAttribute="centerX" secondItem="wY0-sT-g1U" secondAttribute="centerX" id="2CU-0P-5DN"/>
-                                                <constraint firstAttribute="bottom" secondItem="uVl-NF-Zid" secondAttribute="bottom" constant="20" id="38q-Wy-sla"/>
+                                                <constraint firstAttribute="bottom" secondItem="uVl-NF-Zid" secondAttribute="bottom" constant="25" id="38q-Wy-sla"/>
                                                 <constraint firstAttribute="trailing" secondItem="uVl-NF-Zid" secondAttribute="trailing" id="7i8-VZ-65U"/>
                                                 <constraint firstItem="2PE-eG-hKe" firstAttribute="centerX" secondItem="wY0-sT-g1U" secondAttribute="centerX" id="Hb1-p0-orp"/>
                                                 <constraint firstItem="sef-2J-Esb" firstAttribute="centerX" secondItem="wY0-sT-g1U" secondAttribute="centerX" id="eGg-JI-Th3"/>
@@ -119,7 +119,7 @@
                                                 <constraint firstItem="5ba-Zq-dwm" firstAttribute="centerY" secondItem="wY0-sT-g1U" secondAttribute="centerY" id="kaZ-p4-5x1"/>
                                                 <constraint firstAttribute="bottom" secondItem="sef-2J-Esb" secondAttribute="bottom" id="qFd-9j-lbw"/>
                                                 <constraint firstItem="uVl-NF-Zid" firstAttribute="top" secondItem="wY0-sT-g1U" secondAttribute="top" constant="-10" id="qec-ed-nJ9"/>
-                                                <constraint firstItem="5ba-Zq-dwm" firstAttribute="centerX" secondItem="wY0-sT-g1U" secondAttribute="centerX" constant="3" id="rJS-aw-RlB"/>
+                                                <constraint firstItem="5ba-Zq-dwm" firstAttribute="centerX" secondItem="wY0-sT-g1U" secondAttribute="centerX" constant="1" id="rJS-aw-RlB"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5Y-9H-tGK">
@@ -138,14 +138,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hxS-lv-mLc">
-                                                    <rect key="frame" x="53.666666666666686" y="173.66666666666666" width="70" height="45"/>
+                                                    <rect key="frame" x="51.666666666666686" y="173.66666666666666" width="70" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="QYU-Rn-1Ix"/>
                                                         <constraint firstAttribute="width" secondItem="hxS-lv-mLc" secondAttribute="height" multiplier="14:9" id="Tes-cj-0tz"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbP-Jv-CdD" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                                    <rect key="frame" x="0.0" y="-10" width="171.33333333333334" height="382"/>
+                                                    <rect key="frame" x="0.0" y="-10" width="171.33333333333334" height="377"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="NO"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -167,9 +167,9 @@
                                             <constraints>
                                                 <constraint firstItem="CbP-Jv-CdD" firstAttribute="top" secondItem="m5Y-9H-tGK" secondAttribute="top" constant="-10" id="6h9-ba-8s2"/>
                                                 <constraint firstAttribute="trailing" secondItem="CbP-Jv-CdD" secondAttribute="trailing" id="7dV-Ay-ahq"/>
-                                                <constraint firstAttribute="bottom" secondItem="CbP-Jv-CdD" secondAttribute="bottom" constant="20" id="8Tj-f4-CbB"/>
+                                                <constraint firstAttribute="bottom" secondItem="CbP-Jv-CdD" secondAttribute="bottom" constant="25" id="8Tj-f4-CbB"/>
                                                 <constraint firstItem="CbP-Jv-CdD" firstAttribute="leading" secondItem="m5Y-9H-tGK" secondAttribute="leading" id="KRr-cH-Ofm"/>
-                                                <constraint firstItem="hxS-lv-mLc" firstAttribute="centerX" secondItem="m5Y-9H-tGK" secondAttribute="centerX" constant="3" id="NP9-Gc-d65"/>
+                                                <constraint firstItem="hxS-lv-mLc" firstAttribute="centerX" secondItem="m5Y-9H-tGK" secondAttribute="centerX" constant="1" id="NP9-Gc-d65"/>
                                                 <constraint firstItem="hxS-lv-mLc" firstAttribute="centerY" secondItem="m5Y-9H-tGK" secondAttribute="centerY" id="UPn-oe-M9X"/>
                                                 <constraint firstItem="Hvn-lG-RSE" firstAttribute="top" secondItem="jNa-Xz-9hH" secondAttribute="bottom" id="XT9-lu-vBZ"/>
                                                 <constraint firstItem="Hvn-lG-RSE" firstAttribute="centerX" secondItem="m5Y-9H-tGK" secondAttribute="centerX" id="btA-av-5cl"/>

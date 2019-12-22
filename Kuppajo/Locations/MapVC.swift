@@ -42,13 +42,19 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         return locationData.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "LocationDetail", sender: self.locationTable.cellForRow(at: indexPath))
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:LocationCell = self.locationTable.dequeueReusableCell(withIdentifier: "LocationCell") as! LocationCell
         
         cell.LocationName.text = locationData[indexPath.row].name
         let weekday = Date().dayNumberOfWeek()!
-        cell.LocationTimeDetail.text = locationData[indexPath.row].hours.days[weekday]
+        cell.LocationTimeDetail.text = locationData[indexPath.row].hours.days[weekday - 1]
         
         return cell
     }
@@ -62,26 +68,24 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         super.prepare(for: segue, sender: sender)
         
-        switch(segue.identifier ?? "") {
+        if segue.identifier == "LocationDetail"{
             
-        case "showDetail":
             guard let mealDetailViewController = segue.destination as? LocationInfoTVC else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            guard let selectedMealCell = sender as? LocationCell else {
+            guard let cell = sender as? LocationCell else {
                 fatalError("Unexpected sender: \(String(describing: sender))")
             }
-            
-            guard let indexPath = locationTable.indexPath(for: selectedMealCell) else {
+
+            guard let indexPath = locationTable.indexPath(for: cell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
+                
             let selectedMeal = locationData[indexPath.row]
             mealDetailViewController.locationData = selectedMeal
             
-        default:
-            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
         
     }

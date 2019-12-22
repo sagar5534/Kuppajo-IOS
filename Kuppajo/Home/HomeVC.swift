@@ -47,7 +47,7 @@ class HomeVC: UIViewController {
     var swipeGestureRecognizer = UISwipeGestureRecognizer()
     
     let delegate = UIApplication.shared.delegate as! AppDelegate
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,7 +105,8 @@ class HomeVC: UIViewController {
         
     }
     
-    @IBAction func SettingsBtn(_ sender: Any) {}
+    @IBAction func SettingsBtn(_ sender: Any) {
+    }
     
     func setupCard() {
         // Setup starting and ending card height

@@ -12,11 +12,10 @@ import Promises
 
 let db = Firestore.firestore()
 
-
 // Add a new document in collection Users ~ For new user
 func newUser(FirebaseUser user: User){
     db.collection("users").document(user.uid).setData([
-        "name": user.displayName!,
+        "name": user.displayName ?? "",
         "email": user.email!,
         "basic_counter": 0,
         "premium_counter": 0

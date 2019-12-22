@@ -11,6 +11,8 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
+import AuthenticationServices
+import Promises
 
 
 @UIApplicationMain
@@ -19,39 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     var window: UIWindow?
     var realtimeTask: ListenerRegistration?
     lazy var locations = [Locations]()
-    
-    func firebaseLogin( key credential: AuthCredential ) {
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            let db = Firestore.firestore()
-            
-            // User is signed in
-            let user = Auth.auth().currentUser
-            
-            if let user = user {
-                //Check for Existing user document in Firestore
-                let docRef = db.collection("users").document(user.uid)
-                
-                promiseDocExists(DocumentRef: docRef)
-                    .then {
-                        if $0{
-                            //Normal Login - User Exist
-                        }else{
-                            newUser(FirebaseUser: user)
-                        }
-                        self.app_details()
-                        let sb = UIStoryboard(name: "Main", bundle: nil)
-                        self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
-                }
-            }
-            
-        }
-    }
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -66,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         if user != nil {
             //Get app_detail
             app_details()
-        
+            
             //Show App
             self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
         } else {
@@ -105,6 +74,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     //------------------------------------------ Login Code ------------------------------------------
     
+    func firebaseLogin( key credential: AuthCredential) {
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            //let db = Firestore.firestore()
+            let db = Firestore.firestore()
+            
+            // User is signed in
+            let user = Auth.auth().currentUser
+            
+            self.firebaseProcessUserLogin(user: user)
+            
+        }
+    }
+    
+    @available(iOS 13.0, *)
+    func firebaseLoginViaApple( key credential: AuthCredential, appleUser: ASAuthorizationAppleIDCredential) {
+        
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            let user = Auth.auth().currentUser
+            
+            // Add Name to user //GODDAMMIT APPLE
+            let name = "\(appleUser.fullName?.givenName ?? "") \(appleUser.fullName?.familyName ?? "")"
+            
+            self.createProfileChangeRequest(name: name)
+            self.firebaseProcessUserLogin(user: user)
+            
+            
+        }
+    }
+    
+    func firebaseProcessUserLogin(user: User?){
+        
+        if let user = user {
+            //Check for Existing user document in Firestore
+            let docRef = db.collection("users").document(user.uid)
+            
+            promiseDocExists(DocumentRef: docRef)
+                .then {
+                    if $0{
+                        //Normal Login - User Exist
+                    }else{
+                        newUser(FirebaseUser: user)
+                    }
+                    self.app_details()
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
+            }
+        }
+        
+    }
+    
+    func createProfileChangeRequest(name: String? = nil, _ callback: ((Error?) -> ())? = nil){
+        if let request = Auth.auth().currentUser?.createProfileChangeRequest(){
+            if let name = name{
+                request.displayName = name
+            }
+            request.commitChanges(completion: .none)
+        }
+
+    }
+    
+    
     func app_details(){
         
         locations = [Locations]()
@@ -142,14 +182,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         UIView.transition(with: window,duration: 0.3,options: .transitionCrossDissolve,animations: nil,completion: nil)
     }
     
+    //---------------- Sign In With Facebook ------------------
     
     static func shared() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-    }
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Logout")
     }
@@ -174,6 +212,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     }
     
     
+    //---------------- Sign In With Google ------------------
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+    }
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         
         if let error = error {
@@ -185,5 +229,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         firebaseLogin(key: credential)
         
     }
+    
     
 }

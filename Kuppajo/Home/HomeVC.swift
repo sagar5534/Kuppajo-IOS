@@ -96,7 +96,7 @@ class HomeVC: UIViewController {
                     self.cardViewController.Circ2Label.text = "\(9-premium) PURCHASES LEFT"
                 }
         }
-        
+                
         
     }
     

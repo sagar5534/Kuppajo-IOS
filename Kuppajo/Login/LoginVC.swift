@@ -43,19 +43,13 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizat
         setupLoginPanel()
         SetupLoginBtns()
         
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        }
-        
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         
-        var appleLogInButton : ASAuthorizationAppleIDButton = {
+        let appleLogInButton : ASAuthorizationAppleIDButton = {
             let button = ASAuthorizationAppleIDButton(authorizationButtonType: .continue, authorizationButtonStyle: .black)
             
             button.addTarget(self, action: #selector(startSignInWithAppleFlow), for: .touchUpInside)
-            
-            //button.sizeToFit()
             button.cornerRadius = 5
             
             return button
@@ -121,9 +115,6 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizat
         
         FBBtnFake.delegate = UIApplication.shared.delegate as! AppDelegate
         FBBtnFake.permissions = ["public_profile", "email"]
-        
-       
-        
     }
     
     
@@ -238,8 +229,10 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizat
     
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        // Handle error.
-        print("Sign in with Apple errored: \(error)")
+        Analytics.logEvent("Apple Sign In Issue", parameters: [
+            "Page": "LoginVC",
+            "Issue": error
+        ])
     }
     
     @available(iOS 13.0, *)

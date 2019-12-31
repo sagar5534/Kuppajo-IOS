@@ -89,9 +89,7 @@ class MapVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
         
     }
-    
-    
-    
+
 }
 
 extension Date {

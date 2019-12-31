@@ -14,7 +14,6 @@ import MessageUI
 class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var UserName: UILabel!
-    @IBOutlet weak var UserEmail: UILabel!
     @IBOutlet weak var UserIcon: UIImageView!
     
     override func viewDidLoad() {
@@ -28,25 +27,25 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             
             let db = Firestore.firestore()
             let docRef = db.collection("users").document(user!.uid)
-            docRef.getDocument(source: .default) { (document, error) in
-              if let document = document {
-                let dataDescription = document.data()
-                //let name = dataDescription!["name"] as! String
-                //self.UserName.text = name
-                //print(name)
-                
-              } else {
-                print("Document does not exist in cache")
-              }
+            docRef.getDocument(source: .cache) { (document, error) in
+                if let document = document {
+                    let dataDescription = document.data()
+                    let name = dataDescription!["name"] as! String
+                    self.UserName.text = "\(name) 😀"
+                    print(name)
+                    
+                } else {
+                    Analytics.logEvent("loaduserfromcache", parameters: [
+                        "Page": "Settings",
+                        "Issue": "Document does not exist in cache"
+                    ])
+                    self.UserName.text = "Please Refresh App"
+                }
             }
-            
-            
-            
-            UserEmail.text = user?.email
             
             let photo = user?.photoURL
             if (photo == nil){
-                UserIcon.image = #imageLiteral(resourceName: "genericuser")
+                UserIcon.image = #imageLiteral(resourceName: "images")
             }
             else{
                 UserIcon.kf.setImage(with: photo)
@@ -63,6 +62,9 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             try firebaseAuth.signOut()
             LoginManager.init().logOut()
             
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            delegate.realtimeTask?.remove()
+            
             //Show Login
             if let storyboard = self.storyboard {
                 let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
@@ -71,7 +73,10 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             }
             
         } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+            Analytics.logEvent("signout", parameters: [
+                "Page": "Setting",
+                "signOutError": signOutError as NSError
+            ])
         }
         
     }
@@ -114,8 +119,10 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             mail.setSubject("Kuppajo: IOS Help")
             present(mail, animated: true)
         } else {
-            // show failure alert
-            
+            Analytics.logEvent("EmailError", parameters: [
+                "Page": "Settings",
+                "Issue": "Email Popup Error"
+            ])
         }
     }
     

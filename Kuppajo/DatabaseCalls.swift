@@ -21,7 +21,10 @@ func newUser(FirebaseUser user: User){
         "premium_counter": 0
     ]) { err in
         if let err = err {
-            print("Error writing document: \(err) - Signup")
+            Analytics.logEvent("newUser Creation Issue", parameters: [
+                "Page": "Database Calls",
+                "Issue": err
+            ])
         } else {
             print("Document successfully written! User Signed Up")
         }

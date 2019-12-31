@@ -81,13 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                 print(error)
                 return
             }
-            
-            //let db = Firestore.firestore()
-            let db = Firestore.firestore()
-            
             // User is signed in
             let user = Auth.auth().currentUser
-            
             self.firebaseProcessUserLogin(user: user)
             
         }
@@ -108,8 +103,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             
             self.createProfileChangeRequest(name: name)
             self.firebaseProcessUserLogin(user: user)
-            
-            
         }
     }
     
@@ -139,7 +132,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             if let name = name{
                 request.displayName = name
             }
-            request.commitChanges(completion: .none)
+             request.commitChanges(completion: { (error) in
+                       callback?(error)
+                   })
         }
 
     }
@@ -164,7 +159,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                     self.locations.append(Locations(name: name, address1: address1, address2: address2, phone: phone, hours: Hours(x as! [String]), googleMap: googleMap))
                 }
             } else {
-                print("Document does not exist")
+                Analytics.logEvent("App_detail Issue", parameters: [
+                    "Page": "AppDelate",
+                    "Issue": error!
+                ])
             }
         }
     }
@@ -189,7 +187,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        print("Logout")
     }
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -227,7 +224,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         firebaseLogin(key: credential)
-        
     }
     
     

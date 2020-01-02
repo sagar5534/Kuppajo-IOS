@@ -47,7 +47,7 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizat
         
         
         let appleLogInButton : ASAuthorizationAppleIDButton = {
-            let button = ASAuthorizationAppleIDButton(authorizationButtonType: .continue, authorizationButtonStyle: .black)
+            let button = ASAuthorizationAppleIDButton(authorizationButtonType: .continue, authorizationButtonStyle: .whiteOutline)
             
             button.addTarget(self, action: #selector(startSignInWithAppleFlow), for: .touchUpInside)
             button.cornerRadius = 5

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0475B123504E3A001C2C1E /* CardViewController.xib */; };
 		1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0475B223504E3A001C2C1E /* CardViewController.swift */; };
+		1B061CF323C34909003A53DD /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061CF223C34909003A53DD /* MenuVC.swift */; };
+		1B061CF523C34AD5003A53DD /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061CF423C34AD5003A53DD /* MenuTVC.swift */; };
+		1B061CF723C3612C003A53DD /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061CF623C3612C003A53DD /* MenuItem.swift */; };
 		1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5191DC23AB4EFB002B568B /* Locations.swift */; };
 		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
 		1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8823602E4500815700 /* Roboto-Light.ttf */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		1B0475B123504E3A001C2C1E /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		1B0475B223504E3A001C2C1E /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		1B061CF223C34909003A53DD /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		1B061CF423C34AD5003A53DD /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
+		1B061CF623C3612C003A53DD /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		1B22F32723ADE61900910D08 /* Kuppajo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kuppajo.entitlements; sourceTree = "<group>"; };
 		1B5191DC23AB4EFB002B568B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		1B79CA8623602D8400815700 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B061CF123C348C8003A53DD /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				1B061CF223C34909003A53DD /* MenuVC.swift */,
+				1B061CF623C3612C003A53DD /* MenuItem.swift */,
+				1B061CF423C34AD5003A53DD /* MenuTVC.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		1B79CA8C2360355900815700 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +144,11 @@
 				1B5191DC23AB4EFB002B568B /* Locations.swift */,
 				BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */,
 				BDB6DCC2233ACC300008246D /* Main.storyboard */,
-				1B9D69102352B1230006E6E5 /* Locations */,
 				BDB6DCDD233AD77E0008246D /* Login */,
 				BDB6DCDC233AD7740008246D /* Home */,
 				BDB6DCDB233AD76F0008246D /* Cards */,
+				1B061CF123C348C8003A53DD /* Order */,
+				1B9D69102352B1230006E6E5 /* Locations */,
 				BDB6DCDA233AD6F70008246D /* Settings */,
 				BDB6DCC5233ACC310008246D /* Assets.xcassets */,
 				1B79CA8C2360355900815700 /* Font */,
@@ -346,14 +363,17 @@
 				BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */,
 				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
 				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,
+				1B061CF323C34909003A53DD /* MenuVC.swift in Sources */,
 				1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */,
 				1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */,
+				1B061CF523C34AD5003A53DD /* MenuTVC.swift in Sources */,
 				BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */,
 				1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */,
 				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,
 				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
 				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
 				BDB6DCD1233AD62C0008246D /* LoginVC.swift in Sources */,
+				1B061CF723C3612C003A53DD /* MenuItem.swift in Sources */,
 				1B8FE36F234DABC000DE82AF /* TermsVC.swift in Sources */,
 				1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */,
 			);
@@ -511,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.Kuppajo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -533,7 +553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagar.Kuppajo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     var realtimeTask: ListenerRegistration?
     lazy var locations = [Locations]()
     
+    lazy var DrinksCategory = [MenuCateogry]()
+    lazy var Drinks = [MenuItem]()
+    
+    lazy var FoodCategory = [MenuCateogry]()
+    lazy var Food = [MenuItem]()
+    
+    lazy var HomeCategory = [MenuCateogry]()
+    lazy var Home = [MenuItem]()
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -143,7 +152,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     func app_details(){
         
         locations = [Locations]()
-        let docRef = db.collection("app_details").document("location")
+        var docRef = db.collection("app_details").document("location")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 
@@ -165,6 +174,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                 ])
             }
         }
+        
+        DrinksCategory = [MenuCateogry]()
+        Drinks = [MenuItem]()
+        
+        docRef = db.collection("menu").document("Drinks")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                for data in document.data()!{
+                    for item in data.value as! [String:Any] {
+                        if item.key == "Image"{
+                            self.DrinksCategory.append(.init(name: data.key, image: item.value as! String))
+                        }else{
+                            let innerData = item.value as! [String:Any]
+                            let name = innerData["Name"] as! String
+                            let price = innerData["Price"] as! Double
+                            let milk = innerData["Milk"] as! String
+                            
+                            let drink: Drink = .init(milk: milk)
+                            self.Drinks.append(.init(category: data.key, name: name, price: price, data: drink))
+                        }
+                    }
+                }
+            } else {}
+        }
+        
+        FoodCategory = [MenuCateogry]()
+        Food = [MenuItem]()
+        
+        docRef = db.collection("menu").document("Food")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                for data in document.data()!{
+                    for item in data.value as! [String:Any] {
+                        if item.key == "Image"{
+                            self.FoodCategory.append(.init(name: data.key, image: item.value as! String))
+                        }else{
+//                            let innerData = item.value as! [String:Any]
+//                            let name = innerData["Name"] as! String
+//                            let price = innerData["Price"] as! Double
+//                            let milk = innerData["Milk"] as! String
+                            
+                            //let food: Food = .init(milk: milk)
+                            //self.Drinks.append(.init(category: data.key, name: name, price: price, data: drink))
+                        }
+                    }
+                }
+            } else {}
+        }
+        
+        
+        HomeCategory = [MenuCateogry]()
+        Home = [MenuItem]()
+        
+        docRef = db.collection("menu").document("Home")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                for data in document.data()!{
+                    for item in data.value as! [String:Any] {
+                        if item.key == "Image"{
+                            self.HomeCategory.append(.init(name: data.key, image: item.value as! String))
+                        }else{
+//                            let innerData = item.value as! [String:Any]
+//                            let name = innerData["Name"] as! String
+//                            let price = innerData["Price"] as! Double
+//                            let milk = innerData["Milk"] as! String
+                            
+                            //let food: Food = .init(milk: milk)
+                            //self.Drinks.append(.init(category: data.key, name: name, price: price, data: drink))
+                        }
+                    }
+                }
+            } else {}
+        }
+        
     }
     
     //Animating Any Root View Controller Changes

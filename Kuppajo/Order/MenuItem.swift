@@ -28,10 +28,12 @@ class MenuCateogry {
     
     var name = ""
     var image = ""
+    var type = ""
     
-    init(name: String, image: String) {
+    init(name: String, image: String, type: String) {
         self.image = image
         self.name = name
+        self.type = type
     }
     
 }

@@ -193,15 +193,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                     let type = innerData["Type"] as! String
                     let image = innerData["Image"] as! String
                     
-                    if type == "Drink"{
+                    if type == "Drinks"{
                         //Drink
-                        self.DrinksCategory.append(.init(name: name, image: image))
+                        self.DrinksCategory.append(.init(name: name, image: image, type: type))
                     }else if type == "Food"{
                         //Food
-                        self.FoodCategory.append(.init(name: name, image: image))
+                        self.FoodCategory.append(.init(name: name, image: image, type: type))
                     }else if type == "Home"{
                         //Home
-                        self.HomeCategory.append(.init(name: name, image: image))
+                        self.HomeCategory.append(.init(name: name, image: image, type: type))
                     }
                 }
                 

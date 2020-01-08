@@ -32,6 +32,7 @@
 		BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD6233AD6C90008246D /* CardsVC.swift */; };
 		BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCDE233AD8320008246D /* QRVC.swift */; };
 		BDB6DCE1233BD6E60008246D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */; };
+		BDDFA98F23C64929006BA536 /* MenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */; };
 		BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		BDB6DCD6233AD6C90008246D /* CardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsVC.swift; sourceTree = "<group>"; };
 		BDB6DCDE233AD8320008246D /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
 		BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCell.swift; sourceTree = "<group>"; };
 		BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCalls.swift; sourceTree = "<group>"; };
 		F8D81E864B621F06889E5776 /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				1B061CFA23C57B73003A53DD /* MenuVC.swift */,
 				1B061CF623C3612C003A53DD /* MenuItem.swift */,
 				1B061CF423C34AD5003A53DD /* MenuTVC.swift */,
+				BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDFA98F23C64929006BA536 /* MenuCollectionCell.swift in Sources */,
 				BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */,
 				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
 				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,

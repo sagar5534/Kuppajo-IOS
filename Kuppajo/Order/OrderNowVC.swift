@@ -100,12 +100,12 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             guard let indexPath = tableView.indexPath(for: cell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
-            
+                
             print(indexPath.section)
             
-            let selectedMeal = DrinkCategory[indexPath.row]
-//            mealDetailViewController. = selectedMeal
-//
+            let selectedItem = DrinkCategory[indexPath.row]
+            DestinationView.category = selectedItem
+
         }
     }
     

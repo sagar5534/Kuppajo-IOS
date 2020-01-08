@@ -269,7 +269,7 @@
         <!--Order Now-->
         <scene sceneID="bDs-xk-D4H">
             <objects>
-                <viewController id="elH-Yc-McI" customClass="MenuVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="elH-Yc-McI" customClass="OrderNowVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sf7-aA-kTl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,11 +330,28 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="eIQ-ZS-wTe" id="RIo-ZB-Hnc"/>
+                        <segue destination="fAA-Lf-2TO" kind="show" identifier="toMenu" id="6Xh-La-VZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg0-va-FEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5986.3999999999996" y="422.66009852216752"/>
+        </scene>
+        <!--Hot Coffee-->
+        <scene sceneID="6gX-qN-60v">
+            <objects>
+                <viewController id="fAA-Lf-2TO" customClass="MenuVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSg-bN-xf2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MiB-wk-9Dm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hot Coffee" id="rPw-iB-ahZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blP-FF-nCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6937" y="423"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WO4-ZS-1av">

@@ -10,6 +10,7 @@ import Foundation
 
 class MenuItem {
     
+    
     var name = ""
     var price = 0.0
     var category = ""
@@ -24,26 +25,30 @@ class MenuItem {
     
 }
 
-class MenuCateogry {
+
+class Category {
+    var category_name = ""
+    var category_image = ""
     
-    var name = ""
-    var image = ""
-    var type = ""
-    
-    init(name: String, image: String, type: String) {
-        self.image = image
-        self.name = name
-        self.type = type
+    init(category_name: String, category_image: String){
+        self.category_image = category_image
+        self.category_name = category_name
     }
     
 }
 
-class Drink {
+class MenuCateogry {
     
-    var milk = ""
+    var parent = ""
+    var category = [Category]()
     
-    init(milk: String){
-        self.milk = milk
+    init(parent: String, categories: [Category]) {
+        self.parent = parent
+        self.category = categories
+    }
+    
+    func addCategory(name: String, image: String){
+        self.category.append(.init(category_name: name , category_image: image))
     }
     
 }

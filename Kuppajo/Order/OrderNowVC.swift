@@ -13,20 +13,55 @@ import Kingfisher
 class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var DrinkCategory = [MenuCateogry]()
-    var FoodCategory = [MenuCateogry]()
-    var HomeCategory = [MenuCateogry]()
+    
+    var menu: [MenuCateogry] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        DrinkCategory = appDelegate.DrinksCategory
-        FoodCategory = appDelegate.FoodCategory
-        HomeCategory = appDelegate.HomeCategory
+        getMenuFromFirebase()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+    }
+    
+    var sectionTitle = [String]()
+
+    func getMenuFromFirebase(){
+        
+        let docRef = db.collection("app_details").document("menu")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                     
+                for data in document.data()!{
+                    
+                    //Section Titles
+                    self.sectionTitle.append(data.key)
+                    
+                    //Inner Data
+                    let arrayData = data.value as! NSArray
+                    
+                    var items: [Category] = []
+                    for item in arrayData{
+
+                        let innerData = item as! NSDictionary
+                        let name = innerData["Name"] as! String
+                        let image = innerData["Image"] as! String
+                        
+                        items.append(.init(category_name: name, category_image: image))
+                    }
+                    self.menu.append(.init(parent: data.key, categories: items))
+                }
+                
+                //Sorting Section Titles
+                self.sectionTitle = self.sectionTitle.sorted(by: { $0 < $1 })
+
+                self.tableView.reloadData()
+                
+            } else {}
+            
+        }
         
     }
     
@@ -34,7 +69,6 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "toMenu", sender: self.tableView.cellForRow(at: indexPath))
     }
     
-    let sectionTitle = ["Drinks", "Food", "At Home Coffee"]
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitle.count
@@ -46,38 +80,18 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == 0{
-            return DrinkCategory.count
-        }
-        else if section == 1{
-            return FoodCategory.count
-        }else{
-            return HomeCategory.count
-        }
+        return menu[section].category.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:MenuTVC = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuTVC
-        if indexPath.section == 0{
-            cell.cellTitle.text = DrinkCategory[indexPath.row].name
-            
-            let url = URL(string: DrinkCategory[indexPath.row].image)
-            cell.cellImage.kf.setImage(with: url)
-        }
-        else if indexPath.section == 1{
-            cell.cellTitle.text = FoodCategory[indexPath.row].name
-            
-            let url = URL(string: FoodCategory[indexPath.row].image)
-            cell.cellImage.kf.setImage(with: url)
-        }
-        else{
-            cell.cellTitle.text = HomeCategory[indexPath.row].name
-            
-            let url = URL(string: HomeCategory[indexPath.row].image)
-            cell.cellImage.kf.setImage(with: url)
-        }
+        
+        cell.cellTitle.text = menu[indexPath.section].category[indexPath.row].category_name
+        
+        let url = URL(string: menu[indexPath.section].category[indexPath.row].category_image)
+        cell.cellImage.kf.setImage(with: url)
         
         return cell
     }
@@ -91,7 +105,7 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if segue.identifier == "toMenu"{
             
-            guard let DestinationView = segue.destination as? MenuVC else {
+            guard let DestinationView = segue.destination as? MenuTableViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             guard let cell = sender as? MenuTVC else {
@@ -100,11 +114,13 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             guard let indexPath = tableView.indexPath(for: cell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
-                
+            
             print(indexPath.section)
             
-            let selectedItem = DrinkCategory[indexPath.row]
+            let selectedItem = menu[indexPath.section].category[indexPath.row]
             DestinationView.category = selectedItem
+            DestinationView.parentName = menu[indexPath.section].category[indexPath.row].category_name
+            
 
         }
     }

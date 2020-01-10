@@ -175,39 +175,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             }
         }
         
-        DrinksCategory = [MenuCateogry]()
-        Drinks = [MenuItem]()
-        HomeCategory = [MenuCateogry]()
-        Home = [MenuItem]()
-        FoodCategory = [MenuCateogry]()
-        Food = [MenuItem]()
-
-         
-        docRef = db.collection("app_details").document("menu")
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                
-                for data in document.data()!{
-                    let innerData = data.value as! [String:Any]
-                    let name = innerData["Name"] as! String
-                    let type = innerData["Type"] as! String
-                    let image = innerData["Image"] as! String
-                    
-                    if type == "Drinks"{
-                        //Drink
-                        self.DrinksCategory.append(.init(name: name, image: image, type: type))
-                    }else if type == "Food"{
-                        //Food
-                        self.FoodCategory.append(.init(name: name, image: image, type: type))
-                    }else if type == "Home"{
-                        //Home
-                        self.HomeCategory.append(.init(name: name, image: image, type: type))
-                    }
-                }
-                
-            } else {}
-            
-        }
+//        DrinksCategory = [MenuCateogry]()
+//        Drinks = [MenuItem]()
+//        HomeCategory = [MenuCateogry]()
+//        Home = [MenuItem]()
+//        FoodCategory = [MenuCateogry]()
+//        Food = [MenuItem]()
         
     }
     

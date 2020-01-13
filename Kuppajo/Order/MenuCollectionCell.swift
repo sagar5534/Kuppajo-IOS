@@ -10,7 +10,22 @@ import UIKit
 
 class MenuCollectionCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var CellTitle: UILabel!
+    @IBOutlet weak var CellImage: UIImageView!
+    
+    override func awakeFromNib() {
+        CellImage.setRounded()
+    }
+    
+}
+
+extension UIImageView {
+
+   func setRounded() {
+        let radius = self.frame.width / 2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+        self.contentMode = .scaleToFill
+    }
     
 }

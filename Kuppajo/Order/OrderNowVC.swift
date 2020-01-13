@@ -15,6 +15,7 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var menu: [MenuCateogry] = []
+    var sectionTitle = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,16 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    var sectionTitle = [String]()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
+        let selectedRow: IndexPath? = tableView.indexPathForSelectedRow
+        if let selectedRowNotNill = selectedRow {
+            tableView.deselectRow(at: selectedRowNotNill, animated: true)
+        }
+        
+    }
+    
     func getMenuFromFirebase(){
         
         let docRef = db.collection("app_details").document("menu")
@@ -42,16 +51,37 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     //Inner Data
                     let arrayData = data.value as! NSArray
                     
-                    var items: [Category] = []
+                    var subCategory: [Category] = []
                     for item in arrayData{
 
                         let innerData = item as! NSDictionary
                         let name = innerData["Name"] as! String
                         let image = innerData["Image"] as! String
                         
-                        items.append(.init(category_name: name, category_image: image))
+                        // Inner Items
+                        let innerItem = innerData["Item"] as! NSDictionary
+                        
+                        var menuItems: [MenuItem] = []
+
+                        for i in innerItem{
+                            
+                            let x = i.value as! NSArray
+                            var items: [Item] = []
+                            for y in x{
+                                let innerData = y as! NSDictionary
+                                let name = innerData["Name"] as! String
+                                let image = innerData["Image"] as! String
+                                
+                                items.append(.init(name: name, image: image))
+                            }
+                            
+                            menuItems.append(.init(type: i.key as! String, item: items))
+
+                        }
+                        
+                        subCategory.append(.init(category_name: name, category_image: image, items: menuItems))
                     }
-                    self.menu.append(.init(parent: data.key, categories: items))
+                    self.menu.append(.init(parent: data.key, categories: subCategory))
                 }
                 
                 //Sorting Section Titles
@@ -69,7 +99,6 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "toMenu", sender: self.tableView.cellForRow(at: indexPath))
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitle.count
     }
@@ -79,25 +108,26 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return menu[section].category.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:MenuTVC = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuTVC
+        let cell:OrderNowTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! OrderNowTableViewCell
         
         cell.cellTitle.text = menu[indexPath.section].category[indexPath.row].category_name
         
         let url = URL(string: menu[indexPath.section].category[indexPath.row].category_image)
         cell.cellImage.kf.setImage(with: url)
         
+        cell.separatorInset = UIEdgeInsets.zero;
+
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(80)
+        return 100
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -108,20 +138,17 @@ class OrderNowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             guard let DestinationView = segue.destination as? MenuTableViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            guard let cell = sender as? MenuTVC else {
+            guard let cell = sender as? OrderNowTableViewCell else {
                 fatalError("Unexpected sender: \(String(describing: sender))")
             }
             guard let indexPath = tableView.indexPath(for: cell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
-            
-            print(indexPath.section)
-            
+                        
             let selectedItem = menu[indexPath.section].category[indexPath.row]
             DestinationView.category = selectedItem
             DestinationView.parentName = menu[indexPath.section].category[indexPath.row].category_name
             
-
         }
     }
     

@@ -145,7 +145,6 @@ class HomeVC: UIViewController {
         cardViewController.BannerView.addGestureRecognizer(tapGestureRecognizer)
         cardViewController.BannerView.addGestureRecognizer(swipeGestureRecognizer)
         
-        
         //Set up Shadow and Radius
         cardViewController.view.layer.shadowColor = UIColor.black.cgColor
         cardViewController.view.layer.shadowOpacity = 0.3

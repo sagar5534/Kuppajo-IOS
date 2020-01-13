@@ -11,6 +11,7 @@ import UIKit
 class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var MenuTitle: UILabel!
+    @IBOutlet weak var CollectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,13 @@ class MenuTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDataSource & UICollectionViewDelegate, forRow row: Int) {
+        CollectionView.delegate = dataSourceDelegate
+        CollectionView.dataSource = dataSourceDelegate
+        CollectionView.tag = row
+        CollectionView.reloadData()
     }
 
 }

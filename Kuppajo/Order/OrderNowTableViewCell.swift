@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuTVC: UITableViewCell {
+class OrderNowTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var cellImage: UIImageView!
@@ -16,7 +16,8 @@ class MenuTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
+        cellImage.setRounded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -4,6 +4,8 @@ This IOS app was developed for Kuppajo Espresso Bar to establish an Online Rewar
 
 Developed using Swift, and Firebase (Google Cloud) for Auth and Database
 
+*Check out OrderMenu Brach for Menu Ordering Code.
+
 Key Components included in App: 
 - Auth Providers: Google Sign In, Facebook Sign In and Apple Sign In
 - Database calls via Firebase Firestore

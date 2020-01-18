@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -295,7 +294,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-rY-mcp">
-                                <rect key="frame" x="0.0" y="140" width="375" height="439"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="579"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-GM-1zA">
                                 <rect key="frame" x="0.0" y="579" width="375" height="150"/>
@@ -345,7 +344,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="kTM-rY-mcp" firstAttribute="leading" secondItem="qQc-3W-hfw" secondAttribute="leading" id="9VT-Qf-sTG"/>
-                            <constraint firstItem="kTM-rY-mcp" firstAttribute="top" secondItem="qQc-3W-hfw" secondAttribute="top" id="KQr-dP-0FF"/>
+                            <constraint firstItem="kTM-rY-mcp" firstAttribute="top" secondItem="O9E-6G-cSo" secondAttribute="top" id="HX7-sg-sbk"/>
                             <constraint firstItem="kTM-rY-mcp" firstAttribute="trailing" secondItem="qQc-3W-hfw" secondAttribute="trailing" id="LWb-JW-UTb"/>
                             <constraint firstItem="2aB-GM-1zA" firstAttribute="trailing" secondItem="qQc-3W-hfw" secondAttribute="trailing" id="Nqr-eF-Idm"/>
                             <constraint firstItem="2aB-GM-1zA" firstAttribute="leading" secondItem="qQc-3W-hfw" secondAttribute="leading" id="Tuv-w3-tMr"/>

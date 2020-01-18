@@ -20,6 +20,6 @@ https://apps.apple.com/us/app/kuppajo-espresso-bar/id1492371597?ls=1
 Screenshots:
 ![Main](Images/Main.png)
 ![Location](Images/Location.png)
-![Scan](Images/Scan.png)
+![Scan](Images/Scan.png =10x)
 
  

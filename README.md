@@ -18,10 +18,6 @@ Visit the App on the Apple App Store at:
 https://apps.apple.com/us/app/kuppajo-espresso-bar/id1492371597?ls=1
 
 Screenshots:
-
-
-<img src="Images/Main.png" alt="Main Image" width="200"/>
-<img src="Images/Location.png" alt="Location Image" width="200"/>
-<img src="Images/Scan.png" alt="Scan Image" width="200"/>
+<img src="Images/Main.png" alt="Main Image" width="200"/><img src="Images/Location.png" alt="Location Image" width="200"/><img src="Images/Scan.png" alt="Scan Image" width="200"/>
 
  

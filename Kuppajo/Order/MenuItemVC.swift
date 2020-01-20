@@ -9,11 +9,12 @@
 import UIKit
 import Kingfisher
 
-class MenuItemVC: UIViewController {
+class MenuItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var item: Item!
     
     @IBOutlet weak var HeaderImage: UIImageView!
+    @IBOutlet weak var itemTable: UITableView!
     
     
     override func viewDidLoad() {
@@ -23,18 +24,50 @@ class MenuItemVC: UIViewController {
         
         let url = URL(string: item.item_image)
         HeaderImage.kf.setImage(with: url)
-        // Do any additional setup after loading the view.
+        
+        itemTable.delegate = self
+        itemTable.dataSource = self
+            
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 10
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemSizeCell", for: indexPath) as! ItemSizeCell
+
+        
+        
+        return cell
+        
+        if indexPath.row == 0{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemSizeCell", for: indexPath) as! ItemSizeCell
+
+            
+            cell.sizeSegment.removeAllSegments()
+            cell.sizeSegment.insertSegment(withTitle: "Medium", at: 0, animated: false)
+            cell.sizeSegment.insertSegment(withTitle: "Large", at: 1, animated: false)
+            
+            
+            return cell
+            
+        }else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemSizeCell", for: indexPath) as! ItemSizeCell
+
+            return cell
+            
+        }
+        
+    
+    }
+
+
+    
 
 }

@@ -63,7 +63,7 @@ class MenuTableViewController: UITableViewController {
         
         if segue.identifier == "toMenuItem"{
             
-            guard let DestinationView = segue.destination as? MenuItemVC else {
+            guard let DestinationView = segue.destination as? ItemTVC else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
                         

@@ -25,6 +25,9 @@
 		1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D69112352B1450006E6E5 /* MapVC.swift */; };
 		1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D69132352BB3D0006E6E5 /* LocationCell.swift */; };
 		1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D691523542EFE0006E6E5 /* LocationInfoTVC.swift */; };
+		1BAA27C023D55F8500F6E497 /* ItemSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */; };
+		1BCB10E123D56B6900E82245 /* ItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB10E023D56B6900E82245 /* ItemTVC.swift */; };
+		1BDEBFA723D6517E00F128A1 /* MenuStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */; };
 		2C71B7D548F45D7F6982F8A4 /* Pods_Kuppajo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D30E6510EF953E84DE7DA9 /* Pods_Kuppajo.framework */; };
 		BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCBE233ACC300008246D /* AppDelegate.swift */; };
 		BDB6DCC4233ACC300008246D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC2233ACC300008246D /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		1B9D69112352B1450006E6E5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		1B9D69132352BB3D0006E6E5 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		1B9D691523542EFE0006E6E5 /* LocationInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoTVC.swift; sourceTree = "<group>"; };
+		1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSizeCell.swift; sourceTree = "<group>"; };
+		1BCB10E023D56B6900E82245 /* ItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemTVC.swift; path = "/Users/sagar/Documents/Documents - Sagar’s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/ItemTVC.swift"; sourceTree = "<absolute>"; };
+		1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStructure.swift; sourceTree = "<group>"; };
 		8E7E8FC8E0B07C9D14FAA4E4 /* Pods-Kuppajo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.debug.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D30E6510EF953E84DE7DA9 /* Pods_Kuppajo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuppajo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB6DCBB233ACC300008246D /* Kuppajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuppajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,12 +96,15 @@
 		1B061CF123C348C8003A53DD /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				1BAA27BE23D55F5E00F6E497 /* Item Cells */,
 				1B061CF623C3612C003A53DD /* MenuItem.swift */,
+				1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */,
 				1B061CF223C34909003A53DD /* OrderNowVC.swift */,
 				1B061CF423C34AD5003A53DD /* OrderNowTableViewCell.swift */,
 				1B061D0623C6CDF3003A53DD /* MenuTableViewController.swift */,
 				1B061D0823C6D096003A53DD /* MenuTableViewCell.swift */,
 				BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */,
+				1BCB10E023D56B6900E82245 /* ItemTVC.swift */,
 				1B56376523CC0CEF006D4981 /* MenuItemVC.swift */,
 			);
 			path = Order;
@@ -119,6 +128,14 @@
 				1B9D69132352BB3D0006E6E5 /* LocationCell.swift */,
 			);
 			path = Locations;
+			sourceTree = "<group>";
+		};
+		1BAA27BE23D55F5E00F6E497 /* Item Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */,
+			);
+			path = "Item Cells";
 			sourceTree = "<group>";
 		};
 		A414EB87433177A7C0F9E980 /* Pods */ = {
@@ -381,12 +398,15 @@
 				1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */,
 				1B061D0723C6CDF3003A53DD /* MenuTableViewController.swift in Sources */,
 				1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */,
+				1BAA27C023D55F8500F6E497 /* ItemSizeCell.swift in Sources */,
 				1B061CF523C34AD5003A53DD /* OrderNowTableViewCell.swift in Sources */,
+				1BDEBFA723D6517E00F128A1 /* MenuStructure.swift in Sources */,
 				BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */,
 				1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */,
 				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,
 				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
 				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
+				1BCB10E123D56B6900E82245 /* ItemTVC.swift in Sources */,
 				BDB6DCD1233AD62C0008246D /* LoginVC.swift in Sources */,
 				1B56376623CC0CEF006D4981 /* MenuItemVC.swift in Sources */,
 				1B061CF723C3612C003A53DD /* MenuItem.swift in Sources */,

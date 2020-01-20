@@ -16,6 +16,7 @@
 		1B061D0923C6D096003A53DD /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061D0823C6D096003A53DD /* MenuTableViewCell.swift */; };
 		1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5191DC23AB4EFB002B568B /* Locations.swift */; };
 		1B56376623CC0CEF006D4981 /* MenuItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56376523CC0CEF006D4981 /* MenuItemVC.swift */; };
+		1B6718BA23D3A342001913E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B6718B923D3A342001913E6 /* GoogleService-Info.plist */; };
 		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
 		1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8823602E4500815700 /* Roboto-Light.ttf */; };
 		1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8623602D8400815700 /* Roboto-Medium.ttf */; };
@@ -33,7 +34,6 @@
 		BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD4233AD66A0008246D /* HomeVC.swift */; };
 		BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCD6233AD6C90008246D /* CardsVC.swift */; };
 		BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCDE233AD8320008246D /* QRVC.swift */; };
-		BDB6DCE1233BD6E60008246D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */; };
 		BDDFA98F23C64929006BA536 /* MenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */; };
 		BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 		1B22F32723ADE61900910D08 /* Kuppajo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kuppajo.entitlements; sourceTree = "<group>"; };
 		1B5191DC23AB4EFB002B568B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		1B56376523CC0CEF006D4981 /* MenuItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemVC.swift; sourceTree = "<group>"; };
+		1B6718B923D3A342001913E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B79CA8623602D8400815700 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1B79CA8823602E4500815700 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		BDB6DCD4233AD66A0008246D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BDB6DCD6233AD6C90008246D /* CardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsVC.swift; sourceTree = "<group>"; };
 		BDB6DCDE233AD8320008246D /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
-		BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDDFA98E23C64929006BA536 /* MenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCell.swift; sourceTree = "<group>"; };
 		BDFDFBC1233E8D5F0083B29B /* DatabaseCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCalls.swift; sourceTree = "<group>"; };
 		F8D81E864B621F06889E5776 /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 				BDB6DCDA233AD6F70008246D /* Settings */,
 				BDB6DCC5233ACC310008246D /* Assets.xcassets */,
 				1B79CA8C2360355900815700 /* Font */,
+				1B6718B923D3A342001913E6 /* GoogleService-Info.plist */,
 				BDB6DCC7233ACC310008246D /* LaunchScreen.storyboard */,
-				BDB6DCE0233BD6E60008246D /* GoogleService-Info.plist */,
 				BDB6DCCA233ACC310008246D /* Info.plist */,
 			);
 			path = Kuppajo;
@@ -278,9 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */,
+				1B6718BA23D3A342001913E6 /* GoogleService-Info.plist in Resources */,
 				1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */,
 				BDB6DCC9233ACC310008246D /* LaunchScreen.storyboard in Resources */,
-				BDB6DCE1233BD6E60008246D /* GoogleService-Info.plist in Resources */,
 				1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */,
 				1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */,
 				BDB6DCC6233ACC310008246D /* Assets.xcassets in Resources */,

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>590432690493-68hrs0q2fom4lfkkpi3hii7e41og866q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.590432690493-68hrs0q2fom4lfkkpi3hii7e41og866q</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>590432690493-vju1ml9d9fpqjdbf47rvd7p85lbp6c4q.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD-KV-v0oWRqN6bVZcicI-vKtMPLEKWLgg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>590432690493</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sagar.Kuppajo</string>
+	<key>PROJECT_ID</key>
+	<string>kuppajo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kuppajo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:590432690493:ios:57aa3aba12d2788352e554</string>
+	<key>DATABASE_URL</key>
+	<string>https://kuppajo.firebaseio.com</string>
+</dict>
+</plist>

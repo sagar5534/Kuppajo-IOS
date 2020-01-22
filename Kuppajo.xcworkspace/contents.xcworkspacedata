@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/sagar/Documents/Documents - Sagar&#x2019;s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/ItemTVC.swift">
-   </FileRef>
-   <FileRef
       location = "group:Kuppajo.xcodeproj">
    </FileRef>
    <FileRef

@@ -275,10 +275,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-ZS-wTe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="88" id="gVA-tS-MHP" customClass="OrderNowTableViewCell" customModule="Kuppajo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderNowCell" rowHeight="88" id="gVA-tS-MHP" customClass="OrderNowCell" customModule="Kuppajo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.333332061767578" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gVA-tS-MHP" id="1aL-yz-Rrw">
@@ -329,23 +329,40 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="eIQ-ZS-wTe" id="RIo-ZB-Hnc"/>
-                        <segue destination="hLS-G9-kUZ" kind="show" identifier="toMenu" id="Xgj-ps-z90"/>
+                        <segue destination="hLS-G9-kUZ" kind="show" identifier="toCategory" id="Xgj-ps-z90"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg0-va-FEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4399" y="330"/>
+            <point key="canvasLocation" x="5308.695652173913" y="329.46428571428572"/>
         </scene>
-        <!--Title-->
+        <!--Order-->
+        <scene sceneID="Kl3-jG-cgi">
+            <objects>
+                <navigationController id="951-gF-ioE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Order" image="bag" catalog="system" selectedImage="bag.fill" id="Fav-PG-EsT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Iyp-Lp-VbM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="elH-Yc-McI" kind="relationship" relationship="rootViewController" id="E8h-wd-L6i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXV-X5-GmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4304" y="329"/>
+        </scene>
+        <!--Category-->
         <scene sceneID="nly-JG-MBV">
             <objects>
-                <tableViewController id="hLS-G9-kUZ" customClass="MenuTableViewController" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hLS-G9-kUZ" customClass="CategoryDetailVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fbL-j8-Yed">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuTableViewCell" rowHeight="274" id="Ckb-kE-jlA" customClass="MenuTableViewCell" customModule="Kuppajo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="274" id="Ckb-kE-jlA" customClass="CategoryCell" customModule="Kuppajo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="274"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ckb-kE-jlA" id="K3B-Wh-1Go">
@@ -369,7 +386,7 @@
                                                 <inset key="sectionInset" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCollectionCell" id="0qO-a0-GaD" customClass="MenuCollectionCell" customModule="Kuppajo" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionCell" id="0qO-a0-GaD" customClass="CategoryCollectionCell" customModule="Kuppajo" customModuleProvider="target">
                                                     <rect key="frame" x="6" y="19.333333333333332" width="140" height="169"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P1y-Qs-ds7">
@@ -408,14 +425,6 @@
                                                         <outlet property="CellTitle" destination="W7z-oO-k4B" id="r5N-i0-pBd"/>
                                                     </connections>
                                                 </collectionViewCell>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BBx-u9-ySy">
-                                                    <rect key="frame" x="151" y="19.333333333333332" width="140" height="169"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Uab-XK-c14">
-                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="169"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                    </collectionViewCellContentView>
-                                                </collectionViewCell>
                                             </cells>
                                         </collectionView>
                                     </subviews>
@@ -440,30 +449,30 @@
                             <outlet property="delegate" destination="hLS-G9-kUZ" id="4zp-JI-Z1q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="rHO-4V-iZM"/>
+                    <navigationItem key="navigationItem" title="Category" id="rHO-4V-iZM"/>
                     <connections>
-                        <segue destination="ytt-iE-S15" kind="show" identifier="toMenuItem" id="jZW-XL-4Ih"/>
+                        <segue destination="ytt-iE-S15" kind="show" identifier="toProduct" id="jZW-XL-4Ih"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRI-sJ-K3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5176.8000000000002" y="329.55665024630542"/>
+            <point key="canvasLocation" x="6231.884057971015" y="328.79464285714283"/>
         </scene>
-        <!--Item-->
+        <!--Product-->
         <scene sceneID="3Ir-C5-0Zz">
             <objects>
-                <tableViewController id="ytt-iE-S15" customClass="ItemTVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ytt-iE-S15" customClass="ProductVC" customModule="Kuppajo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDZ-Ht-tG1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bW5-2J-haZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemSizeCell" rowHeight="73" id="o0T-Wm-8LI" customClass="ItemSizeCell" customModule="Kuppajo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="275" width="414" height="73"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o0T-Wm-8LI" id="33Z-Wr-xbC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
@@ -496,7 +505,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9MU-tE-Aaz">
-                                <rect key="frame" x="0.0" y="348" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="401" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9MU-tE-Aaz" id="gyS-Oo-cX0">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -509,14 +518,14 @@
                             <outlet property="delegate" destination="ytt-iE-S15" id="bEf-1o-QJc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Item" id="HZa-CX-nhf"/>
+                    <navigationItem key="navigationItem" title="Product" id="HZa-CX-nhf"/>
                     <connections>
                         <outlet property="HeaderImage" destination="bW5-2J-haZ" id="ZkF-St-qrA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jS-ea-QKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6300.0000000000009" y="328.79464285714283"/>
+            <point key="canvasLocation" x="7210.144927536232" y="328.79464285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WO4-ZS-1av">
@@ -531,8 +540,8 @@
                     <connections>
                         <segue destination="yNP-jS-ntc" kind="relationship" relationship="viewControllers" id="DLb-yl-d3c"/>
                         <segue destination="LJd-Af-A6K" kind="relationship" relationship="viewControllers" id="yhQ-Yk-jK7"/>
-                        <segue destination="5Qm-4P-R6R" kind="relationship" relationship="viewControllers" id="JsI-b7-v4l"/>
-                        <segue destination="rbR-Iq-aP1" kind="relationship" relationship="viewControllers" id="ZhI-zG-RFu"/>
+                        <segue destination="951-gF-ioE" kind="relationship" relationship="viewControllers" id="hag-IG-XEh"/>
+                        <segue destination="rbR-Iq-aP1" kind="relationship" relationship="viewControllers" id="yb0-9V-E6I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwF-vh-RNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1266,25 +1275,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqa-zy-WDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4186" y="330"/>
-        </scene>
-        <!--Order-->
-        <scene sceneID="WYe-Ad-HpD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qm-4P-R6R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Order" image="bag" catalog="system" selectedImage="bag.fill" id="c99-Nf-cT7"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cMt-rd-Vh0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="elH-Yc-McI" kind="relationship" relationship="rootViewController" id="I63-bH-M1U"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jm0-Mf-2oB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3620" y="330"/>
         </scene>
     </scenes>
     <resources>

@@ -21,15 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     var window: UIWindow?
     var realtimeTask: ListenerRegistration?
     lazy var locations = [Locations]()
-    
-    lazy var DrinksCategory = [MenuCateogry]()
-    lazy var Drinks = [MenuItem]()
-    
-    lazy var FoodCategory = [MenuCateogry]()
-    lazy var Food = [MenuItem]()
-    
-    lazy var HomeCategory = [MenuCateogry]()
-    lazy var Home = [MenuItem]()
+    var menuData: MenuStructure?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -151,6 +143,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     func app_details(){
         
+        //Location Call
         locations = [Locations]()
         var docRef = db.collection("app_details").document("location")
         docRef.getDocument { (document, error) in
@@ -175,12 +168,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             }
         }
         
-//        DrinksCategory = [MenuCateogry]()
-//        Drinks = [MenuItem]()
-//        HomeCategory = [MenuCateogry]()
-//        Home = [MenuItem]()
-//        FoodCategory = [MenuCateogry]()
-//        Food = [MenuItem]()
+        //Menu Call
+        docRef = db.collection("app_details").document("order_menu")
+        docRef.getDocument { (document, error) in
+            let result = Result {
+                try document.flatMap {
+                    try $0.data(as: MenuStructure.self)
+                }
+            }
+            switch result {
+            case .success(let menu):
+                if let menu = menu {
+                    print("Menu: \(menu)")
+                    self.menuData = menu
+                } else {
+                    print("Document does not exist")
+                }
+            case .failure(let error):
+                print("Error decoding Menu: \(error)")
+            }
+        }
+            
         
     }
     

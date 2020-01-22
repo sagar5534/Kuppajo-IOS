@@ -19,19 +19,31 @@ struct Menu: Codable {
     let name: String
     let products: [Product]
     let children: [Menu]
-    let id, uri: String
+    let image: String
+    //let id, uri: String
+    
+    func toImageURL() -> URL{
+        return URL(string: image)!
+    }
+    
 }
 
 // MARK: - Product
 struct Product: Codable {
     let name: String
-    let formCode: FormCode
-    let displayOrder, productNumber: Int
-    let productType: ProductType
-    let availability: Availability
-    let assets: Assets
+    //let formCode: FormCode
+    //let displayOrder, productNumber: Int
+    let displayOrder: Int
+    //let productType: ProductType
+    //let availability: Availability
+    //let assets: Assets
+    let image: String
     let sizes: [Size]
-    let uri: String
+    //let uri: String
+    
+    func toImageURL() -> URL{
+        return URL(string: image)!
+    }
 }
 
 // MARK: - Assets
@@ -63,7 +75,7 @@ enum ProductType: String, Codable {
 
 // MARK: - Size
 struct Size: Codable {
-    let sizeCode: SizeCode
+    let SizeCode: SizeCode
 }
 
 enum SizeCode: String, Codable {

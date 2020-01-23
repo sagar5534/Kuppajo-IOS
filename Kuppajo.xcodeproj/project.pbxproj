@@ -26,6 +26,7 @@
 		1BAA27C023D55F8500F6E497 /* ItemSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */; };
 		1BCB10E123D56B6900E82245 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB10E023D56B6900E82245 /* ProductVC.swift */; };
 		1BDEBFA723D6517E00F128A1 /* MenuStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */; };
+		1BF4029923D8D1D0008069E0 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4029823D8D1D0008069E0 /* ItemSelectionCell.swift */; };
 		95BE5F358517B24CCD1708AA /* Pods_Kuppajo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58940B6F687F927FCC1B9823 /* Pods_Kuppajo.framework */; };
 		BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCBE233ACC300008246D /* AppDelegate.swift */; };
 		BDB6DCC4233ACC300008246D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC2233ACC300008246D /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSizeCell.swift; sourceTree = "<group>"; };
 		1BCB10E023D56B6900E82245 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductVC.swift; path = "/Users/sagar/Documents/Documents - Sagar’s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/ProductVC.swift"; sourceTree = "<absolute>"; };
 		1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStructure.swift; sourceTree = "<group>"; };
+		1BF4029823D8D1D0008069E0 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
 		38FA794D73387F61EAAB0101 /* Pods-Kuppajo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.debug.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.debug.xcconfig"; sourceTree = "<group>"; };
 		58940B6F687F927FCC1B9823 /* Pods_Kuppajo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuppajo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102D6E8A90152575E77FBEF /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		1BAA27BE23D55F5E00F6E497 /* Item Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1BF4029823D8D1D0008069E0 /* ItemSelectionCell.swift */,
 				1BAA27BF23D55F8500F6E497 /* ItemSizeCell.swift */,
 			);
 			path = "Item Cells";
@@ -422,6 +425,7 @@
 				BDB6DCD5233AD66A0008246D /* HomeVC.swift in Sources */,
 				1B9D691623542EFE0006E6E5 /* LocationInfoTVC.swift in Sources */,
 				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,
+				1BF4029923D8D1D0008069E0 /* ItemSelectionCell.swift in Sources */,
 				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
 				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
 				1BCB10E123D56B6900E82245 /* ProductVC.swift in Sources */,

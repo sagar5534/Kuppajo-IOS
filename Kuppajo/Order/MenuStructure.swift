@@ -20,7 +20,6 @@ struct Menu: Codable {
     let products: [Product]
     let children: [Menu]
     let image: String
-    //let id, uri: String
     
     func toImageURL() -> URL{
         return URL(string: image)!
@@ -31,46 +30,45 @@ struct Menu: Codable {
 // MARK: - Product
 struct Product: Codable {
     let name: String
+    let desc: String
     //let formCode: FormCode
-    //let displayOrder, productNumber: Int
     let displayOrder: Int
     //let productType: ProductType
     //let availability: Availability
-    //let assets: Assets
     let image: String
     let sizes: [Size]
-    //let uri: String
+    let productOptions: [ProductOption]
     
     func toImageURL() -> URL{
         return URL(string: image)!
     }
 }
 
-// MARK: - Assets
-struct Assets: Codable {
-    let thumbnail: String
+
+// MARK: - ProductOption
+struct ProductOption: Codable {
+    let name: String
+    let products: [Option]
+    let children: [ProductOption]
 }
 
-enum Availability: String, Codable {
-    case available = "Available"
-    case notOrderable = "NotOrderable"
+
+// MARK: - Option
+struct Option: Codable {
+    let name: String
+    //let sizes: [FormSize]
 }
 
-enum FormCode: String, Codable {
-    case hot = "Hot"
-    case iced = "Iced"
-    case kCup = "K-Cup"
-    case packaged = "Packaged"
-    case single = "Single"
-    case verismoSystemPods = "verismo-system-pods"
-    case via = "VIA"
-    case wholeBean = "Whole-Bean"
-}
+// MARK: - FormSize
+struct FormSize: Codable {
+    let sizeCode: SizeCode
+    let name, sku: String
+    let sizeDefault: Bool?
 
-enum ProductType: String, Codable {
-    case beverage = "Beverage"
-    case coffee = "Coffee"
-    case food = "Food"
+    enum CodingKeys: String, CodingKey {
+        case sizeCode, name, sku
+        case sizeDefault = "default"
+    }
 }
 
 // MARK: - Size
@@ -78,6 +76,7 @@ struct Size: Codable {
     let SizeCode: SizeCode
 }
 
+// MARK: - SizeCode
 enum SizeCode: String, Codable {
     case double = "Double"
     case grande = "Grande"
@@ -99,3 +98,27 @@ enum SizeCode: String, Codable {
     case venti = "Venti"
 }
 
+// MARK: - FormCode
+enum FormCode: String, Codable {
+    case hot = "Hot"
+    case iced = "Iced"
+    case kCup = "K-Cup"
+    case packaged = "Packaged"
+    case single = "Single"
+    case verismoSystemPods = "verismo-system-pods"
+    case via = "VIA"
+    case wholeBean = "Whole-Bean"
+}
+
+// MARK: - ProductType
+enum ProductType: String, Codable {
+    case beverage = "Beverage"
+    case coffee = "Coffee"
+    case food = "Food"
+}
+
+// MARK: - Availability
+enum Availability: String, Codable {
+    case available = "Available"
+    case notOrderable = "NotOrderable"
+}

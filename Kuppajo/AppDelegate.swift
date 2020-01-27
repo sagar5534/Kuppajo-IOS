@@ -143,6 +143,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     
     func app_details(){
         
+        //Add test data
+        addTestData()
+        
         //Location Call
         locations = [Locations]()
         var docRef = db.collection("app_details").document("location")
@@ -169,7 +172,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         }
         
         //Menu Call
-        docRef = db.collection("app_details").document("order_menu")
+        //docRef = db.collection("app_details").document("order_menu")
+        docRef = db.collection("app_details").document("test_menu")
         docRef.getDocument { (document, error) in
             let result = Result {
                 try document.flatMap {
@@ -189,6 +193,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             }
         }
             
+        
+    }
+    
+    func addTestData() {
+                
+        let size1 = Size(SizeCode: SizeCode(rawValue: "Short")!)
+        let size2 = Size(SizeCode: SizeCode(rawValue: "Tall")!)
+        let size3 = Size(SizeCode: SizeCode(rawValue: "Grande")!)
+        let size4 = Size(SizeCode: SizeCode(rawValue: "Venti")!)
+        let sizes = [size1, size2, size3, size4]
+        
+        
+        let option1 = ProductOption(name: "Add Ins", products: [Option(name: "Vanilla Shot")], children: [])
+        
+        let IrishCreamOptions = [option1]
+        
+        let IrishCream = Product(name: "Irish Cream", desc: "A one-to-one combination of fresh-brewed coffee and steamed milk add up to one distinctly delicious coffee drink remarkably mixed.", displayOrder: 0, image: "https://globalassets.starbucks.com/assets/0079e05cbb2b4c5ebbd6332d12084c2e.jpg?impolicy=1by1_wide_1242", sizes: sizes, productOptions: IrishCreamOptions)
+        
+        let americano = Menu(displayOrder: 0, name: "Americano", products: [IrishCream], children: [], image: "https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242")
+        
+        let coldCoffee = Menu(displayOrder: 0, name: "Cold Coffee", products: [], children: [americano], image: "https://globalassets.starbucks.com/assets/43d54469baa74cbaa3220c57e4ae909c.jpg")
+        
+        let Drink = Menu(displayOrder: 0, name: "Drink", products: [], children: [coldCoffee], image: "")
+        
+        let menuItems = MenuStructure(menus: [Drink])
+        
+    
+        do {
+            try db.collection("app_details").document("test_menu").setData(from: menuItems, merge: true)
+        } catch let error {
+            print("Error writing city to Firestore: \(error)")
+        }
         
     }
     

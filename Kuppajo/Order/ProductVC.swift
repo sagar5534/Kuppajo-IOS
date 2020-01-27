@@ -7,7 +7,9 @@ class ProductVC: UITableViewController {
 
     @IBOutlet weak var HeaderImage: UIImageView!
     @IBOutlet weak var HeaderDesc: UILabel!
+    @IBOutlet weak var HeaderStack: UIStackView!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -15,6 +17,18 @@ class ProductVC: UITableViewController {
         HeaderImage.kf.setImage(with: product.toImageURL())
         HeaderDesc.text = product.desc
     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        super.viewWillLayoutSubviews()
+        
     }
     
 }

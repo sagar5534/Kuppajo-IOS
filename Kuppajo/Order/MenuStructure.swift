@@ -25,6 +25,13 @@ struct Menu: Codable {
         return URL(string: image)!
     }
     
+//    init(displayOrder: Int, name, String, image: String, products: [Product], children: [Menu]){
+//        self.displayOrder = displayOrder
+//        self.name = name
+//        self.
+//    }
+//    
+    
 }
 
 // MARK: - Product

@@ -163,6 +163,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.3.0)
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
+  - AUPickerCell (1.0.2.0)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -359,6 +360,7 @@ PODS:
   - UICircularProgressRing (6.5.0)
 
 DEPENDENCIES:
+  - AUPickerCell
   - Crashlytics
   - Fabric
   - FBSDKLoginKit
@@ -378,6 +380,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - AppAuth
+    - AUPickerCell
     - BoringSSL-GRPC
     - Crashlytics
     - Fabric
@@ -420,6 +423,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
+  AUPickerCell: b6f788d62f449014204776ff6fdc841aebbc352f
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
@@ -459,6 +463,6 @@ SPEC CHECKSUMS:
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   UICircularProgressRing: e6852e8f88e296cbbbe2720cccb55241acda6708
 
-PODFILE CHECKSUM: d99a9454a03cfb2dbb65af9c670e2332bb85f6d8
+PODFILE CHECKSUM: b4d0546fd49b069c7a67dd4bf4f0bedbe2c2a782
 
 COCOAPODS: 1.8.4

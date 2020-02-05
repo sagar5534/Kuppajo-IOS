@@ -13,6 +13,10 @@
 		1B061CF523C34AD5003A53DD /* OrderNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061CF423C34AD5003A53DD /* OrderNowCell.swift */; };
 		1B061D0723C6CDF3003A53DD /* CategoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061D0623C6CDF3003A53DD /* CategoryDetailVC.swift */; };
 		1B061D0923C6D096003A53DD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B061D0823C6D096003A53DD /* CategoryCell.swift */; };
+		1B0B7C4723E7675200DD6543 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B7C4623E7675200DD6543 /* ProductDetailVC.swift */; };
+		1B0B7C4923E76D9A00DD6543 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B7C4823E76D9A00DD6543 /* StepperCell.swift */; };
+		1B0B7C4B23E7867200DD6543 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B7C4A23E7867200DD6543 /* SwitchCell.swift */; };
+		1B0B7C4D23E7868300DD6543 /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B7C4C23E7868300DD6543 /* SelectionCell.swift */; };
 		1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5191DC23AB4EFB002B568B /* Locations.swift */; };
 		1B6718BA23D3A342001913E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B6718B923D3A342001913E6 /* GoogleService-Info.plist */; };
 		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
@@ -27,7 +31,7 @@
 		1BCB10E123D56B6900E82245 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB10E023D56B6900E82245 /* ProductVC.swift */; };
 		1BDEBFA723D6517E00F128A1 /* MenuStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */; };
 		1BF4029923D8D1D0008069E0 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4029823D8D1D0008069E0 /* ItemSelectionCell.swift */; };
-		95BE5F358517B24CCD1708AA /* Pods_Kuppajo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58940B6F687F927FCC1B9823 /* Pods_Kuppajo.framework */; };
+		408EF29B018F2C574C4D0E39 /* Pods_Kuppajo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0008D07CA04B3792C4D715DC /* Pods_Kuppajo.framework */; };
 		BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6DCBE233ACC300008246D /* AppDelegate.swift */; };
 		BDB6DCC4233ACC300008246D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC2233ACC300008246D /* Main.storyboard */; };
 		BDB6DCC6233ACC310008246D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB6DCC5233ACC310008246D /* Assets.xcassets */; };
@@ -41,12 +45,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0008D07CA04B3792C4D715DC /* Pods_Kuppajo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuppajo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0475B123504E3A001C2C1E /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		1B0475B223504E3A001C2C1E /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		1B061CF223C34909003A53DD /* OrderNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNowVC.swift; sourceTree = "<group>"; };
 		1B061CF423C34AD5003A53DD /* OrderNowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNowCell.swift; sourceTree = "<group>"; };
 		1B061D0623C6CDF3003A53DD /* CategoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryDetailVC.swift; path = "/Users/sagar/Documents/Documents - Sagar’s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/CategoryDetailVC.swift"; sourceTree = "<absolute>"; };
 		1B061D0823C6D096003A53DD /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		1B0B7C4623E7675200DD6543 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		1B0B7C4823E76D9A00DD6543 /* StepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepperCell.swift; path = "/Users/sagar/Documents/Documents - Sagar’s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/StepperCell.swift"; sourceTree = "<absolute>"; };
+		1B0B7C4A23E7867200DD6543 /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		1B0B7C4C23E7868300DD6543 /* SelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
 		1B22F32723ADE61900910D08 /* Kuppajo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kuppajo.entitlements; sourceTree = "<group>"; };
 		1B5191DC23AB4EFB002B568B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		1B6718B923D3A342001913E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -62,9 +71,8 @@
 		1BCB10E023D56B6900E82245 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductVC.swift; path = "/Users/sagar/Documents/Documents - Sagar’s MacBook Pro/Kuppajo - Project/Kuppajo-IOS/Kuppajo/Order/ProductVC.swift"; sourceTree = "<absolute>"; };
 		1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStructure.swift; sourceTree = "<group>"; };
 		1BF4029823D8D1D0008069E0 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
-		38FA794D73387F61EAAB0101 /* Pods-Kuppajo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.debug.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.debug.xcconfig"; sourceTree = "<group>"; };
-		58940B6F687F927FCC1B9823 /* Pods_Kuppajo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuppajo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A102D6E8A90152575E77FBEF /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
+		4C40FD022A28EB5066B83E03 /* Pods-Kuppajo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.release.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.release.xcconfig"; sourceTree = "<group>"; };
+		A5F05950F408B75642F847B4 /* Pods-Kuppajo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuppajo.debug.xcconfig"; path = "Target Support Files/Pods-Kuppajo/Pods-Kuppajo.debug.xcconfig"; sourceTree = "<group>"; };
 		BDB6DCBB233ACC300008246D /* Kuppajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuppajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB6DCBE233ACC300008246D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB6DCC3233ACC300008246D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BE5F358517B24CCD1708AA /* Pods_Kuppajo.framework in Frameworks */,
+				408EF29B018F2C574C4D0E39 /* Pods_Kuppajo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +102,24 @@
 		1B061CF123C348C8003A53DD /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				1B06E65F23E5290900E02FD3 /* Product Detail Page */,
 				1B3DC48423D7C42D00E5C2F5 /* Product Page */,
 				1B3DC48123D7B30700E5C2F5 /* Category Detail Page */,
 				1BDEBFA823D6579300F128A1 /* Order Now Page */,
 				1BDEBFA623D6517E00F128A1 /* MenuStructure.swift */,
 			);
 			path = Order;
+			sourceTree = "<group>";
+		};
+		1B06E65F23E5290900E02FD3 /* Product Detail Page */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B7C4A23E7867200DD6543 /* SwitchCell.swift */,
+				1B0B7C4C23E7868300DD6543 /* SelectionCell.swift */,
+				1B0B7C4823E76D9A00DD6543 /* StepperCell.swift */,
+				1B0B7C4623E7675200DD6543 /* ProductDetailVC.swift */,
+			);
+			name = "Product Detail Page";
 			sourceTree = "<group>";
 		};
 		1B3DC48123D7B30700E5C2F5 /* Category Detail Page */ = {
@@ -159,10 +179,10 @@
 			name = "Order Now Page";
 			sourceTree = "<group>";
 		};
-		3F18728A30EEE46DBE083295 /* Frameworks */ = {
+		704F89D7B856AA4DB0B1F083 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58940B6F687F927FCC1B9823 /* Pods_Kuppajo.framework */,
+				0008D07CA04B3792C4D715DC /* Pods_Kuppajo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,8 +190,8 @@
 		A414EB87433177A7C0F9E980 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				38FA794D73387F61EAAB0101 /* Pods-Kuppajo.debug.xcconfig */,
-				A102D6E8A90152575E77FBEF /* Pods-Kuppajo.release.xcconfig */,
+				A5F05950F408B75642F847B4 /* Pods-Kuppajo.debug.xcconfig */,
+				4C40FD022A28EB5066B83E03 /* Pods-Kuppajo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -182,7 +202,7 @@
 				BDB6DCBD233ACC300008246D /* Kuppajo */,
 				BDB6DCBC233ACC300008246D /* Products */,
 				A414EB87433177A7C0F9E980 /* Pods */,
-				3F18728A30EEE46DBE083295 /* Frameworks */,
+				704F89D7B856AA4DB0B1F083 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,13 +280,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDB6DCCD233ACC310008246D /* Build configuration list for PBXNativeTarget "Kuppajo" */;
 			buildPhases = (
-				2BF4D7DAD71DDAD9232516E0 /* [CP] Check Pods Manifest.lock */,
+				DE8FD7871498BFDCB37110BA /* [CP] Check Pods Manifest.lock */,
 				BDB6DCB7233ACC300008246D /* Sources */,
 				BDB6DCB8233ACC300008246D /* Frameworks */,
 				BDB6DCB9233ACC300008246D /* Resources */,
 				1BF4AC4D235F717100566510 /* ShellScript */,
-				F8576F91C9689BE9AF3899DC /* [CP] Embed Pods Frameworks */,
-				3679B598FAE5CC94CFE361A7 /* [CP] Copy Pods Resources */,
+				160517F0E457341646762A27 /* [CP] Embed Pods Frameworks */,
+				02FDEDDA1278A961E5068FE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,6 +349,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02FDEDDA1278A961E5068FE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		160517F0E457341646762A27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1BF4AC4D235F717100566510 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,7 +401,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
 		};
-		2BF4D7DAD71DDAD9232516E0 /* [CP] Check Pods Manifest.lock */ = {
+		DE8FD7871498BFDCB37110BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,40 +423,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3679B598FAE5CC94CFE361A7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8576F91C9689BE9AF3899DC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kuppajo/Pods-Kuppajo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,6 +436,7 @@
 				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
 				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,
 				1B061CF323C34909003A53DD /* OrderNowVC.swift in Sources */,
+				1B0B7C4D23E7868300DD6543 /* SelectionCell.swift in Sources */,
 				1B9D69142352BB3D0006E6E5 /* LocationCell.swift in Sources */,
 				1B061D0723C6CDF3003A53DD /* CategoryDetailVC.swift in Sources */,
 				1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */,
@@ -428,10 +449,13 @@
 				1BF4029923D8D1D0008069E0 /* ItemSelectionCell.swift in Sources */,
 				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
 				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
+				1B0B7C4723E7675200DD6543 /* ProductDetailVC.swift in Sources */,
 				1BCB10E123D56B6900E82245 /* ProductVC.swift in Sources */,
 				BDB6DCD1233AD62C0008246D /* LoginVC.swift in Sources */,
 				1B8FE36F234DABC000DE82AF /* TermsVC.swift in Sources */,
 				1B0475B423504E3A001C2C1E /* CardViewController.swift in Sources */,
+				1B0B7C4923E76D9A00DD6543 /* StepperCell.swift in Sources */,
+				1B0B7C4B23E7867200DD6543 /* SwitchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +599,7 @@
 		};
 		BDB6DCCE233ACC310008246D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38FA794D73387F61EAAB0101 /* Pods-Kuppajo.debug.xcconfig */;
+			baseConfigurationReference = A5F05950F408B75642F847B4 /* Pods-Kuppajo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kuppajo/Kuppajo.entitlements;
@@ -597,7 +621,7 @@
 		};
 		BDB6DCCF233ACC310008246D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A102D6E8A90152575E77FBEF /* Pods-Kuppajo.release.xcconfig */;
+			baseConfigurationReference = 4C40FD022A28EB5066B83E03 /* Pods-Kuppajo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kuppajo/Kuppajo.entitlements;

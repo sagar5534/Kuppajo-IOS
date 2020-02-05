@@ -10,10 +10,15 @@
 #endif
 #endif
 
+#import "GTMAppAuth 6.h"
 #import "GTMAppAuth.h"
+#import "GTMAppAuthFetcherAuthorization 6.h"
+#import "GTMAppAuthFetcherAuthorization+Keychain 6.h"
 #import "GTMAppAuthFetcherAuthorization+Keychain.h"
 #import "GTMAppAuthFetcherAuthorization.h"
+#import "GTMKeychain 6.h"
 #import "GTMKeychain.h"
+#import "GTMOAuth2KeychainCompatibility 6.h"
 #import "GTMOAuth2KeychainCompatibility.h"
 
 FOUNDATION_EXPORT double GTMAppAuthVersionNumber;

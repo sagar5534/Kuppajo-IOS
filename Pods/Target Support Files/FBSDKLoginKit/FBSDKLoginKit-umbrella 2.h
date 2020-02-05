@@ -10,15 +10,25 @@
 #endif
 #endif
 
+#import "FBSDKDeviceLoginCodeInfo 2.h"
 #import "FBSDKDeviceLoginCodeInfo.h"
+#import "FBSDKDeviceLoginManager 2.h"
 #import "FBSDKDeviceLoginManager.h"
+#import "FBSDKDeviceLoginManagerResult 2.h"
 #import "FBSDKDeviceLoginManagerResult.h"
+#import "FBSDKLoginButton 2.h"
 #import "FBSDKLoginButton.h"
+#import "FBSDKLoginConstants 2.h"
 #import "FBSDKLoginConstants.h"
+#import "FBSDKLoginKit 2.h"
 #import "FBSDKLoginKit.h"
+#import "FBSDKLoginManager 2.h"
 #import "FBSDKLoginManager.h"
+#import "FBSDKLoginManagerLoginResult 2.h"
 #import "FBSDKLoginManagerLoginResult.h"
+#import "FBSDKLoginTooltipView 2.h"
 #import "FBSDKLoginTooltipView.h"
+#import "FBSDKTooltipView 2.h"
 #import "FBSDKTooltipView.h"
 
 FOUNDATION_EXPORT double FBSDKLoginKitVersionNumber;

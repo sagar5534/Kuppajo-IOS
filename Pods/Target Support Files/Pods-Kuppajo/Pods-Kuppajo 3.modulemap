@@ -1,6 +1,0 @@
-framework module Pods_Kuppajo {
-  umbrella header "Pods-Kuppajo-umbrella.h"
-
-  export *
-  module * { export * }
-}

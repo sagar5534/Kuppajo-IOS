@@ -197,7 +197,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     }
     
     func addTestData() {
-                
+        
         let size1 = Size(SizeCode: SizeCode(rawValue: "Short")!)
         let size2 = Size(SizeCode: SizeCode(rawValue: "Tall")!)
         let size3 = Size(SizeCode: SizeCode(rawValue: "Grande")!)
@@ -205,9 +205,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         let sizes = [size1, size2, size3, size4]
         
         
-        let option1 = ProductOption(name: "Add Ins", products: [Option(name: "Vanilla Shot")], children: [])
+        let option1 = ProductOption(name: "Add Ins", products: [], children: [])
+        let option2 = ProductOption(name: "Flavours", products: [], children: [
+            
+            ProductOption(name: "Syrups", products: [
+                Option(name: "Caramel Syrup", type: "Stepper"),
+                Option(name: "Vanilla Syrup", type: "Selection")
+            ], children: []),
+            
+            ProductOption(name: "Sauces", products: [], children: [])
+        ])
         
-        let IrishCreamOptions = [option1]
+        let IrishCreamOptions = [option1, option2]
         
         let IrishCream = Product(name: "Irish Cream", desc: "A one-to-one combination of fresh-brewed coffee and steamed milk add up to one distinctly delicious coffee drink remarkably mixed.", displayOrder: 0, image: "https://globalassets.starbucks.com/assets/0079e05cbb2b4c5ebbd6332d12084c2e.jpg?impolicy=1by1_wide_1242", sizes: sizes, productOptions: IrishCreamOptions)
         

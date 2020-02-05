@@ -10,8 +10,11 @@
 #endif
 #endif
 
+#import "FirebaseABTesting 6.h"
 #import "FirebaseABTesting.h"
+#import "FIRExperimentController 6.h"
 #import "FIRExperimentController.h"
+#import "FIRLifecycleEvents 6.h"
 #import "FIRLifecycleEvents.h"
 
 FOUNDATION_EXPORT double FirebaseABTestingVersionNumber;

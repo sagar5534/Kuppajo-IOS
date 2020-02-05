@@ -13,6 +13,7 @@
 #import "AppAuthCore.h"
 #import "OIDAuthorizationRequest.h"
 #import "OIDAuthorizationResponse.h"
+#import "OIDAuthorizationService 2.h"
 #import "OIDAuthorizationService.h"
 #import "OIDAuthState.h"
 #import "OIDAuthStateChangeDelegate.h"
@@ -45,6 +46,7 @@
 #import "AppAuthCore.h"
 #import "OIDAuthorizationRequest.h"
 #import "OIDAuthorizationResponse.h"
+#import "OIDAuthorizationService 2.h"
 #import "OIDAuthorizationService.h"
 #import "OIDAuthState.h"
 #import "OIDAuthStateChangeDelegate.h"
@@ -76,6 +78,7 @@
 #import "OIDAuthorizationService+IOS.h"
 #import "OIDAuthState+IOS.h"
 #import "OIDExternalUserAgentCatalyst.h"
+#import "OIDExternalUserAgentIOS 4.h"
 #import "OIDExternalUserAgentIOS.h"
 #import "OIDExternalUserAgentIOSCustomBrowser.h"
 

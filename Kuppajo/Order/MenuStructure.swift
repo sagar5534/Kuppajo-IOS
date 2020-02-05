@@ -25,13 +25,6 @@ struct Menu: Codable {
         return URL(string: image)!
     }
     
-//    init(displayOrder: Int, name, String, image: String, products: [Product], children: [Menu]){
-//        self.displayOrder = displayOrder
-//        self.name = name
-//        self.
-//    }
-//    
-    
 }
 
 // MARK: - Product
@@ -63,6 +56,7 @@ struct ProductOption: Codable {
 // MARK: - Option
 struct Option: Codable {
     let name: String
+    let type: String
     //let sizes: [FormSize]
 }
 

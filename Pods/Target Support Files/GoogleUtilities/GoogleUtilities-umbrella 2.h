@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "GULLoggerLevel 8.h"
 #import "GULLoggerLevel.h"
+#import "GULLoggerCodes 8.h"
 #import "GULLoggerCodes.h"
 #import "GULNSData+zlib.h"
 

@@ -20,5 +20,5 @@ target 'Kuppajo' do
   pod 'Kingfisher'
   pod 'UICircularProgressRing'
   pod 'FirebaseFirestoreSwift'
-
+  pod "AUPickerCell"
 end

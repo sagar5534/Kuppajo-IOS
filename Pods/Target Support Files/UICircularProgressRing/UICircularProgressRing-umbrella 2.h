@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UICircularProgressRing 2.h"
 #import "UICircularProgressRing.h"
 
 FOUNDATION_EXPORT double UICircularProgressRingVersionNumber;

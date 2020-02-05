@@ -34,10 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
         
         if user != nil {
             //Get app_detail
-            app_details()
-            
+            let docRef = db.collection("users").document(user!.uid)
+            app_details(DocumentRef: docRef, FirebaseUser: user)
+                        
             //Show App
-            self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
+            setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
         } else {
             //Show Login
             self.setRootViewController(sb.instantiateViewController(withIdentifier: "LoginVC"))
@@ -97,11 +98,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
                 return
             }
             let user = Auth.auth().currentUser
-            
-            // Add Name to user //GODDAMMIT APPLE
             let name = "\(appleUser.fullName?.givenName ?? "") \(appleUser.fullName?.familyName ?? "")"
-            
             self.createProfileChangeRequest(name: name)
+            
             self.firebaseProcessUserLogin(user: user)
         }
     }
@@ -109,22 +108,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     func firebaseProcessUserLogin(user: User?){
         
         if let user = user {
-            //Check for Existing user document in Firestore
-            let docRef = db.collection("users").document(user.uid)
             
-            promiseDocExists(DocumentRef: docRef)
-                .then {
-                    if $0{
-                        //Normal Login - User Exist
-                    }else{
-                        newUser(FirebaseUser: user)
-                    }
-                    self.app_details()
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    self.setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
-            }
+            let docRef = db.collection("users").document(user.uid)
+            app_details(DocumentRef: docRef, FirebaseUser: user)
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            setRootViewController(sb.instantiateViewController(withIdentifier: "AppTabBarController"))
+            
         }
-        
     }
     
     func createProfileChangeRequest(name: String? = nil, _ callback: ((Error?) -> ())? = nil){
@@ -140,8 +131,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
     }
     
     
-    func app_details(){
+    func app_details(DocumentRef docRef: DocumentReference, FirebaseUser user: User?){
         
+        //Ensure User Exists. Create Document if not.
+        if let user = user {
+            promiseDocExists(DocumentRef: docRef)
+                .then {
+                    if $0{
+                    }else{
+                        newUser(FirebaseUser: user)
+                    }
+            }
+        }
+        
+        
+        //Gets Location Data
         locations = [Locations]()
         let docRef = db.collection("app_details").document("location")
         docRef.getDocument { (document, error) in

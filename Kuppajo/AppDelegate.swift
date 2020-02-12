@@ -210,7 +210,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginB
             
             ProductOption(name: "Syrups", products: [
                 Option(name: "Caramel Syrup", type: "Stepper"),
-                Option(name: "Vanilla Syrup", type: "Selection")
+                Option(name: "Vanilla Syrup", type: "Selection"),
+                Option(name: "Pumpkin Syrup", type: "Selection"),
+                Option(name: "Some Syrup", type: "Stepper"),
             ], children: []),
             
             ProductOption(name: "Sauces", products: [], children: [])

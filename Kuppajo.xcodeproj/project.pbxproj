@@ -19,6 +19,10 @@
 		1B0B7C4D23E7868300DD6543 /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B7C4C23E7868300DD6543 /* SelectionCell.swift */; };
 		1B5191DD23AB4EFB002B568B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5191DC23AB4EFB002B568B /* Locations.swift */; };
 		1B6718BA23D3A342001913E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B6718B923D3A342001913E6 /* GoogleService-Info.plist */; };
+		1B6BDAE423F3967500A14FED /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BDAE023F3967400A14FED /* DateTableViewCell.swift */; };
+		1B6BDAE523F3967500A14FED /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6BDAE123F3967400A14FED /* DatePickerTableViewCell.xib */; };
+		1B6BDAE623F3967500A14FED /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BDAE223F3967400A14FED /* DatePickerTableViewCell.swift */; };
+		1B6BDAE723F3967500A14FED /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6BDAE323F3967500A14FED /* DateTableViewCell.xib */; };
 		1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */; };
 		1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8823602E4500815700 /* Roboto-Light.ttf */; };
 		1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79CA8623602D8400815700 /* Roboto-Medium.ttf */; };
@@ -59,6 +63,10 @@
 		1B22F32723ADE61900910D08 /* Kuppajo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kuppajo.entitlements; sourceTree = "<group>"; };
 		1B5191DC23AB4EFB002B568B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		1B6718B923D3A342001913E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B6BDAE023F3967400A14FED /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		1B6BDAE123F3967400A14FED /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		1B6BDAE223F3967400A14FED /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		1B6BDAE323F3967500A14FED /* DateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
 		1B79CA8623602D8400815700 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		1B79CA8723602E3D00815700 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1B79CA8823602E4500815700 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -118,6 +126,10 @@
 				1B0B7C4C23E7868300DD6543 /* SelectionCell.swift */,
 				1B0B7C4823E76D9A00DD6543 /* StepperCell.swift */,
 				1B0B7C4623E7675200DD6543 /* ProductDetailVC.swift */,
+				1B6BDAE223F3967400A14FED /* DatePickerTableViewCell.swift */,
+				1B6BDAE123F3967400A14FED /* DatePickerTableViewCell.xib */,
+				1B6BDAE023F3967400A14FED /* DateTableViewCell.swift */,
+				1B6BDAE323F3967500A14FED /* DateTableViewCell.xib */,
 			);
 			name = "Product Detail Page";
 			sourceTree = "<group>";
@@ -336,9 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B79CA8B2360332F00815700 /* Roboto-Medium.ttf in Resources */,
+				1B6BDAE523F3967500A14FED /* DatePickerTableViewCell.xib in Resources */,
 				1B6718BA23D3A342001913E6 /* GoogleService-Info.plist in Resources */,
 				1B79CA892360332900815700 /* Roboto-Regular.ttf in Resources */,
 				BDB6DCC9233ACC310008246D /* LaunchScreen.storyboard in Resources */,
+				1B6BDAE723F3967500A14FED /* DateTableViewCell.xib in Resources */,
 				1B0475B323504E3A001C2C1E /* CardViewController.xib in Resources */,
 				1B79CA8A2360332D00815700 /* Roboto-Light.ttf in Resources */,
 				BDB6DCC6233ACC310008246D /* Assets.xcassets in Resources */,
@@ -433,6 +447,7 @@
 				BDDFA98F23C64929006BA536 /* CategoryCollectionCell.swift in Sources */,
 				BDB6DCD7233AD6C90008246D /* CardsVC.swift in Sources */,
 				1B061D0923C6D096003A53DD /* CategoryCell.swift in Sources */,
+				1B6BDAE423F3967500A14FED /* DateTableViewCell.swift in Sources */,
 				1B9D69122352B1450006E6E5 /* MapVC.swift in Sources */,
 				BDFDFBC2233E8D5F0083B29B /* DatabaseCalls.swift in Sources */,
 				1B061CF323C34909003A53DD /* OrderNowVC.swift in Sources */,
@@ -448,6 +463,7 @@
 				BDB6DCBF233ACC300008246D /* AppDelegate.swift in Sources */,
 				1BF4029923D8D1D0008069E0 /* ItemSelectionCell.swift in Sources */,
 				1B8FE371234DB6DB00DE82AF /* SettingsTVC.swift in Sources */,
+				1B6BDAE623F3967500A14FED /* DatePickerTableViewCell.swift in Sources */,
 				BDB6DCDF233AD8320008246D /* QRVC.swift in Sources */,
 				1B0B7C4723E7675200DD6543 /* ProductDetailVC.swift in Sources */,
 				1BCB10E123D56B6900E82245 /* ProductVC.swift in Sources */,

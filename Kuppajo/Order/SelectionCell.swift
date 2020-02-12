@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol SelectionCellDelegate: AnyObject {
-    
-    func changeText(for youtuber: String)
-    
-}
-
 class SelectionCell: UITableViewCell {
     
     @IBOutlet weak var Name: UILabel!
@@ -21,7 +15,6 @@ class SelectionCell: UITableViewCell {
     
     let pickerView = UIPickerView()
     
-    weak var delegate : SelectionCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()

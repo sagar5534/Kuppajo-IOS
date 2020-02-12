@@ -37,7 +37,7 @@ struct Product: Codable {
     //let availability: Availability
     let image: String
     let sizes: [Size]
-    let productOptions: [ProductOption]
+    var productOptions: [ProductOption]
     
     func toImageURL() -> URL{
         return URL(string: image)!
@@ -48,8 +48,8 @@ struct Product: Codable {
 // MARK: - ProductOption
 struct ProductOption: Codable {
     let name: String
-    let products: [Option]
-    let children: [ProductOption]
+    var products: [Option]
+    var children: [ProductOption]
 }
 
 
@@ -57,6 +57,7 @@ struct ProductOption: Codable {
 struct Option: Codable {
     let name: String
     let type: String
+    var amount: String?
     //let sizes: [FormSize]
 }
 
